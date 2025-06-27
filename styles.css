@@ -1,0 +1,233 @@
+body {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* uses 'Lora', 0 margin, 0 padding, and a background color*/
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+}
+
+section h2 {
+    text-align: center;
+}
+
+section p {
+    text-align: left;
+}
+
+p + ul {
+    margin-top: 0;
+}
+
+section #contact {
+    text-align: center;
+}
+
+#contact {
+    text-align: center;
+    margin-top: 20px; /* adds some space above the section */
+}
+
+#contact h2 {
+    text-align: center; /* centers "Get in Touch" */
+    margin-bottom: 20px; /* adds some space below the header */
+}
+
+#contact .social-buttons {
+    display: flex; /* uses flexbox to align the buttons in a row */
+    justify-content: center; /* centers the buttons horizontally */
+    gap: 20px; /* adds space between buttons */
+    flex-wrap: wrap; /* has buttons wrap if the screen is too small */
+}
+
+#projects {
+    text-align: center; /* centers the section */
+}
+
+#projects p {
+    margin-bottom: 0; /* removes space below "Overview" */
+    padding-bottom: 0; /* has no extra padding */
+}
+
+#projects ul {
+    list-style-position: inside; /* keeps bullet points inside the text */
+    display: inline-block; /* centering */
+    text-align: left; /* makes bullets align properly with text */
+    margin-top: 0; /* removes space above the bullet list */
+    padding-top: 0; /* has no extra padding */
+}
+
+
+#projects ul li {
+    margin-bottom: 7px; /* adds space between each bullet point */
+}
+
+.contact-icon {
+    width: 40px; /* width of 40px */
+    height: 40px; /* height of 40px */
+    margin: 10px; /* adds margin spacing around icons */
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out; /* button animation details */
+    object-fit: contain; /* has the whole image is visible without distortion */
+}
+
+.contact-icon:hover {
+    transform: scale(1.1); /* slight zoom effect on hover */
+}
+
+button {
+    border: none;    /* no border */
+    background: none; /* no background */
+    padding: 0;      /* removes default padding */
+    cursor: pointer; /* makes button clickable */
+    display: inline-block; /* proper alignment */
+    font-family: 'Lora', serif;
+}
+
+a, button {
+    text-decoration: none; /* no underlines */
+    outline: none; /* no focus outlines */
+    border: none; /* remove borders */
+    background: none; /* no background */
+    padding: 0; /* remove padding */
+    margin: 0; /* remove margin */
+    display: inline-flex; /* align images next to each other */
+    justify-content: center; /* center content horizontally */
+    align-items: center; /* center content vertically */
+}
+
+header a {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out; /* button animation details */
+    object-fit: contain; /* has the whole image is visible without distortion */
+}
+
+header a:hover {
+    transform: scale(1.3); /* slight zoom effect on hover */
+    outline-offset: 1px;
+}
+
+.centered-image {
+    display: block; /* makes it a block element so margin auto works */
+    margin: 20px auto; /* centers horizontally & adds spacing */
+    max-width: 100%; /* responsiveness */
+    height: auto; /* keeps aspect ratio */
+}
+
+.image-container {
+    text-align: center; /* centers the images */
+    margin: 20px auto; /* adds space above and below the whole section */
+    /* padding-top: 10px;  */
+    /* adds extra space specifically above the images */
+}
+
+.image-container img {
+    display: inline-block; /* aligns images side-by-side */
+    margin: 0 10px; /* adds spacing between images */
+    width: 350px; /* has consistent sizing */
+    height: 350px;
+    object-fit: cover; /* has images well-framed */
+}
+
+.under-construction-img {
+    display: block; /* make sure it's treated as a block element */
+    margin: 0 auto; /* center it */
+    width: 220px; /* width */
+    height: auto; /* maintain aspect ratio */
+    object-fit: contain; /* make sure the full image is visible */
+    overflow: visible; /* make sure it's not clipped */
+}
+
+#map {
+    text-align: center; /* centers the map */
+    margin: 50px 0; /* adds space above & below */
+}
+
+.map-container {
+    display: flex;
+    justify-content: center; /* center the map */
+    align-items: center;
+}
+
+blockquote {
+    border-left: 3px solid #000000; 
+    padding-left: 10px; /* add space between the line and the text */
+    margin-left: 0; /* remove default indentation */
+    margin-right: 0; /* remove default indentation */
+} 
+
+#projects p, #clubs p {
+    margin-bottom: 0; /* removes space below "Overview" */
+    padding-bottom: 0; /* removes extra padding */
+}
+
+#projects ul, #clubs ul {
+    margin-top: 0; /* removes space above the bullet list */
+    padding-top: 0; /* has no extra padding */
+}
+
+#projects p:last-of-type, #clubs p:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#projects p:nth-last-of-type(2), #clubs p:nth-last-of-type(2) {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#projects p:last-of-type, #clubs p:last-of-type {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#projects button a {
+    color: black;
+    background-color: white;
+    outline: 2px solid black;
+    outline-offset: 1px;
+}
+
+#projects button a:hover {
+    transform: scale(1.1); /* slight zoom effect on hover */
+    outline: 2px solid black;
+    outline-offset: 1px;
+}
+
+.title-and-skip-button {
+    display: flex; /* arrange items in a row */
+    justify-content: center; /* space between title and button */
+    align-items: center; /* vertically align the items in the center */
+}
+
+.title-and-skip-button h2 {
+    margin: 0; /* removes any default margin on the h2 */
+}
+
+.title-and-skip-button button {
+    margin-left: 20px; /* adds space between the title and the button */
+}
