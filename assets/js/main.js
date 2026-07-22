@@ -101,6 +101,39 @@ function applyConfigLinks(config) {
 }
 
 /* ------------------------------------------------------------
+  Config-driven text and URLs
+
+  Usage note:
+  <span data-config-text="siteName">Fallback text</span>
+  <a data-config-href="baseUrl" href="/">Fallback link</a>
+------------------------------------------------------------ */
+function getConfigValue(config, path) {
+  return path
+    .split(".")
+    .reduce((current, key) => current?.[key], config);
+}
+
+function applyConfigValues(config) {
+  document.querySelectorAll("[data-config-text]").forEach((el) => {
+    const path = safeStr(el.getAttribute("data-config-text"));
+    const value = safeStr(getConfigValue(config, path));
+
+    if (value) {
+      el.textContent = value;
+    }
+  });
+
+  document.querySelectorAll("[data-config-href]").forEach((el) => {
+    const path = safeStr(el.getAttribute("data-config-href"));
+    const value = safeStr(getConfigValue(config, path));
+
+    if (value && el.tagName.toLowerCase() === "a") {
+      el.setAttribute("href", value);
+    }
+  });
+}
+
+/* ------------------------------------------------------------
   Footer init (auto-year)
 ------------------------------------------------------------ */
 function initFooterYear() {
@@ -206,6 +239,7 @@ async function init() {
     try {
         const config = await loadJSON("/data/config.json");
         applyConfigLinks(config);
+        applyConfigValues(config);
     } catch (e) {
         console.warn("Config load failed:", e);
     }

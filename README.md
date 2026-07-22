@@ -7,7 +7,7 @@ This is "**[Aaron Schlossberg's Universe](https://www.aaronschlossberg.com/)**";
 - **Home**: [https://www.aaronschlossberg.com/](https://www.aaronschlossberg.com/)
 - **Education**: [https://www.aaronschlossberg.com/education/](https://www.aaronschlossberg.com/education/)
   - **Hebrew Academy**: [https://www.aaronschlossberg.com/education/hebrew-academy/](https://www.aaronschlossberg.com/education/hebrew-academy/)
-  - **Pathways**: [https://www.aaronschlossberg.com/education/pathways/](https://www.aaronschlossberg.com/education/pathways/)
+  - **Pathways Academy**: [https://www.aaronschlossberg.com/education/pathways-academy/](https://www.aaronschlossberg.com/education/pathways-academy/)
   - **Muhlenberg**: [https://www.aaronschlossberg.com/education/muhlenberg/](https://www.aaronschlossberg.com/education/muhlenberg/)
     - **Clubs**: [https://www.aaronschlossberg.com/education/muhlenberg/clubs/](https://www.aaronschlossberg.com/education/muhlenberg/clubs/)
       - **Fencing Club video page**: [https://www.aaronschlossberg.com/projects/fencing-video/](https://www.aaronschlossberg.com/projects/fencing-video/)
