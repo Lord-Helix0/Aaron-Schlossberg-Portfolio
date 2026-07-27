@@ -40,7 +40,6 @@ This is "**[Aaron Schlossberg's Universe](https://www.aaronschlossberg.com/)**";
 2. Open `index.html` in a browser.
 
 ## Goals & Future Improvements
-- Further enhance the visual design and layout with additional HTML and advanced CSS.
 - Add interactive elements using more JavaScript. 
 - Continue to improve the formatting.
 - Add more pages (and perhaps some subdomains, as well). 
