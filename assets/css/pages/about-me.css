@@ -1,0 +1,605 @@
+/* ==========================================================
+   ABOUT ME PAGE
+   /about-me/
+   ========================================================== */
+
+.about-page-container {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+
+/* ----------------------------------------------------------
+   Hero
+   ---------------------------------------------------------- */
+
+.about-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 5rem 1.5rem;
+    border-bottom: 1px solid rgba(95, 31, 44, 0.12);
+    background:
+        radial-gradient(
+            circle at 80% 25%,
+            rgba(184, 90, 104, 0.2),
+            transparent 34%
+        ),
+        linear-gradient(
+            145deg,
+            #f8f1f2 0%,
+            #ffffff 52%,
+            #f4e7e9 100%
+        );
+}
+
+.about-hero::before {
+    content: "";
+    position: absolute;
+    bottom: -180px;
+    left: -140px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: rgba(138, 47, 63, 0.08);
+}
+
+.about-hero-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(240px, 0.7fr);
+    align-items: center;
+    gap: 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-eyebrow,
+.about-section-label {
+    margin: 0 0 0.65rem;
+    color: var(--accent-dark);
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+.about-hero h1 {
+    margin: 0;
+    color: #2b1d1d;
+    font-size: clamp(2.8rem, 7vw, 5.6rem);
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+}
+
+.about-hero-roles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem 0.7rem;
+    margin: 1.25rem 0 0;
+    color: var(--accent-dark);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 700;
+}
+
+.about-hero-summary {
+    max-width: 720px;
+    margin: 1.5rem 0 0;
+    color: #4a3b3b;
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    line-height: 1.8;
+}
+
+.about-hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.about-hero-buttons .cta-button {
+    margin: 0;
+}
+
+.about-secondary-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 46px;
+    padding: 0.78rem 1.45rem;
+    border: 2px solid var(--accent);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.7);
+    color: var(--accent-dark);
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.about-secondary-button:hover,
+.about-secondary-button:focus-visible {
+    background: var(--accent);
+    color: #ffffff;
+    box-shadow: 0 10px 24px var(--accent-glow);
+    transform: translateY(-2px);
+}
+
+.about-hero-image-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.about-hero-image {
+    width: min(100%, 310px);
+    border: 9px solid rgba(255, 255, 255, 0.88);
+    border-radius: 50%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    box-shadow:
+        0 24px 55px rgba(54, 31, 35, 0.2),
+        0 0 0 1px rgba(95, 31, 44, 0.1);
+}
+
+
+/* ----------------------------------------------------------
+   General headings and prose
+   ---------------------------------------------------------- */
+
+.about-section-heading {
+    margin: 0 0 2rem;
+    text-align: center;
+}
+
+.about-section-heading h2 {
+    margin-bottom: 0.8rem;
+    color: #2b1d1d;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    line-height: 1.2;
+}
+
+.about-section-heading > p:last-child:not(.about-section-label) {
+    margin-bottom: 0;
+    color: #655757;
+    line-height: 1.75;
+    text-align: center;
+}
+
+.about-heading-left {
+    text-align: left;
+}
+
+.about-prose {
+    font-size: 1.05rem;
+    line-height: 1.85;
+}
+
+
+/* ----------------------------------------------------------
+   Focus cards
+   ---------------------------------------------------------- */
+
+.about-focus-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.about-focus-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 245px;
+    padding: 1.5rem;
+    overflow: hidden;
+    border: 1px solid rgba(95, 31, 44, 0.11);
+    border-radius: 16px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.97),
+            rgba(248, 241, 242, 0.82)
+        );
+    box-shadow: 0 8px 22px rgba(51, 33, 36, 0.07);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.about-focus-card:hover {
+    border-color: rgba(138, 47, 63, 0.28);
+    box-shadow: 0 15px 32px rgba(51, 33, 36, 0.12);
+    transform: translateY(-4px);
+}
+
+.about-card-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+    border-radius: 14px;
+    background: linear-gradient(
+        135deg,
+        var(--accent),
+        var(--accent-dark)
+    );
+    color: #ffffff;
+    font-size: 1.22rem;
+    font-weight: 700;
+    box-shadow: 0 7px 17px var(--accent-glow);
+}
+
+.about-focus-card h3 {
+    margin-bottom: 0.65rem;
+    color: #2b1d1d;
+    font-size: 1.3rem;
+}
+
+.about-focus-card p {
+    flex-grow: 1;
+    margin-top: 0;
+    color: #5c4e4e;
+    line-height: 1.7;
+}
+
+.about-focus-card a,
+.about-inline-link {
+    color: var(--accent-dark);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.about-focus-card a:hover,
+.about-inline-link:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+
+/* ----------------------------------------------------------
+   Project rows
+   ---------------------------------------------------------- */
+
+.about-project-list {
+    border-top: 1px solid rgba(95, 31, 44, 0.13);
+}
+
+.about-project-row {
+    display: grid;
+    grid-template-columns: 60px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.45rem 0;
+    border-bottom: 1px solid rgba(95, 31, 44, 0.13);
+}
+
+.about-project-number {
+    margin: 0;
+    color: var(--accent-light);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.about-project-copy h3 {
+    margin-bottom: 0.35rem;
+    color: #2b1d1d;
+}
+
+.about-project-copy p {
+    margin: 0;
+    color: #625454;
+    line-height: 1.65;
+}
+
+.about-project-link {
+    color: var(--accent-dark);
+    font-weight: 700;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.about-project-link:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+
+/* ----------------------------------------------------------
+   Interest tags
+   ---------------------------------------------------------- */
+
+.about-interest-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.7rem;
+}
+
+.about-interest-list span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 38px;
+    padding: 0.55rem 0.95rem;
+    border: 1px solid rgba(138, 47, 63, 0.17);
+    border-radius: 999px;
+    background: #fbf6f7;
+    color: #4c383c;
+    font-size: 0.94rem;
+    line-height: 1.2;
+}
+
+
+/* ----------------------------------------------------------
+   Philosophy and future
+   ---------------------------------------------------------- */
+
+.about-two-column-section {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    padding-inline: 0;
+}
+
+.about-column-card {
+    margin: 0;
+}
+
+.about-column-card > p {
+    color: #564848;
+    line-height: 1.8;
+}
+
+.about-future-card {
+    color: #ffffff;
+    background:
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(255, 255, 255, 0.15),
+            transparent 32%
+        ),
+        linear-gradient(
+            145deg,
+            var(--accent),
+            var(--accent-dark)
+        );
+    color: #ffffff;
+}
+
+.about-future-card h2,
+.about-future-card .about-section-label,
+.about-future-card > p {
+    color: #ffffff;
+}
+
+.about-future-card .about-section-label {
+    opacity: 0.78;
+}
+
+
+/* ----------------------------------------------------------
+   Personal section
+   ---------------------------------------------------------- */
+
+.about-personal-section {
+    display: grid;
+    grid-template-columns: minmax(250px, 0.8fr) minmax(0, 1.25fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-personal-image-wrap {
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 14px 32px rgba(51, 33, 36, 0.14);
+}
+
+.about-personal-image {
+    display: block;
+    width: 100%;
+    min-height: 330px;
+    max-height: 460px;
+    object-fit: cover;
+}
+
+.about-personal-copy h2 {
+    margin-bottom: 1rem;
+    color: #2b1d1d;
+    font-size: clamp(1.7rem, 4vw, 2.35rem);
+}
+
+.about-personal-copy p {
+    color: #594b4b;
+    line-height: 1.8;
+}
+
+
+/* ----------------------------------------------------------
+   Quick facts
+   ---------------------------------------------------------- */
+
+.about-facts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 0;
+}
+
+.about-fact {
+    padding: 1.25rem;
+    border: 1px solid rgba(95, 31, 44, 0.12);
+    border-radius: 14px;
+    background: #fbf7f8;
+}
+
+.about-fact dt {
+    margin-bottom: 0.45rem;
+    color: var(--accent-dark);
+    font-size: 0.79rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.about-fact dd {
+    margin: 0;
+    color: #3f3032;
+    font-weight: 600;
+    line-height: 1.55;
+}
+
+
+/* ----------------------------------------------------------
+   Explore cards
+   ---------------------------------------------------------- */
+
+.about-explore-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.about-explore-card {
+    display: block;
+    min-height: 190px;
+    padding: 1.3rem;
+    border: 1px solid rgba(95, 31, 44, 0.12);
+    border-radius: 15px;
+    background: #ffffff;
+    color: inherit;
+    text-decoration: none;
+    box-shadow: 0 7px 20px rgba(51, 33, 36, 0.07);
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.about-explore-card:hover,
+.about-explore-card:focus-visible {
+    border-color: rgba(138, 47, 63, 0.35);
+    box-shadow: 0 13px 29px rgba(51, 33, 36, 0.12);
+    transform: translateY(-4px);
+}
+
+.about-explore-number {
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--accent-light);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.about-explore-card h3 {
+    margin-bottom: 0.55rem;
+    color: var(--accent-dark);
+    font-size: 1.25rem;
+}
+
+.about-explore-card p {
+    margin: 0;
+    color: #615353;
+    line-height: 1.65;
+}
+
+
+/* ----------------------------------------------------------
+   Responsive About Me page
+   ---------------------------------------------------------- */
+
+@media (max-width: 850px) {
+    .about-hero {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .about-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        text-align: center;
+    }
+
+    .about-hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-hero-roles {
+        justify-content: center;
+    }
+
+    .about-hero-image-wrap {
+        grid-row: 1;
+    }
+
+    .about-hero-image {
+        width: min(68vw, 270px);
+    }
+
+    .about-two-column-section,
+    .about-personal-section {
+        grid-template-columns: 1fr;
+    }
+
+    .about-personal-image {
+        min-height: 260px;
+        max-height: 390px;
+    }
+
+    .about-facts-grid,
+    .about-explore-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .about-hero {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .about-hero-roles span {
+        display: none;
+    }
+
+    .about-hero-roles {
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .about-hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .about-hero-buttons .cta-button,
+    .about-secondary-button {
+        box-sizing: border-box;
+        width: min(100%, 310px);
+    }
+
+    .about-focus-grid,
+    .about-facts-grid,
+    .about-explore-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-project-row {
+        grid-template-columns: 42px minmax(0, 1fr);
+    }
+
+    .about-project-link {
+        grid-column: 2;
+        justify-self: start;
+    }
+}

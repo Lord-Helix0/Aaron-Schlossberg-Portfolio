@@ -20,6 +20,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/main.css">
     <script defer src="/assets/js/main.js"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "@id": "https://www.aaronschlossberg.com/images/#breadcrumbs",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.aaronschlossberg.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Images",
+                "item": "https://www.aaronschlossberg.com/images/"
+            }
+        ]
+    }
+    </script>
 </head>
 
 <body>
@@ -27,6 +49,13 @@
 
     <main class="container">
         <section class="section images-hero">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li aria-current="page">Images</li>
+                </ol>
+            </nav>
+
             <h1>Images</h1>
             <p>
                 A visual hub for photos, artwork, travel images, pictures of me,

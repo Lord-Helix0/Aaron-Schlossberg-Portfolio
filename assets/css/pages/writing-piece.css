@@ -1,0 +1,598 @@
+/* Individual writing pages (/writings/<piece-slug>/) */
+
+.writing-piece-page {
+    color: var(--ink);
+    background:
+        linear-gradient(rgba(138, 47, 63, 0.025) 1px, transparent 1px),
+        #f4f1ef;
+    background-size: 100% 32px;
+}
+
+.writing-piece-page a:focus-visible,
+.writing-piece-page button:focus-visible {
+    border-radius: 4px;
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.writing-piece-main [id] {
+    scroll-margin-top: 1.5rem;
+}
+
+/* Fixed reading-progress indicator */
+.writing-progress {
+    appearance: none;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 5px;
+    overflow: hidden;
+    border: 0;
+    background: rgba(95, 31, 44, 0.16);
+    box-shadow: 0 1px 4px rgba(36, 27, 27, 0.12);
+}
+
+.writing-progress::-webkit-progress-bar {
+    background: rgba(95, 31, 44, 0.16);
+}
+
+.writing-progress::-webkit-progress-value {
+    background: linear-gradient(90deg, var(--accent-light), var(--accent-dark));
+}
+
+.writing-progress::-moz-progress-bar {
+    background: linear-gradient(90deg, var(--accent-light), var(--accent-dark));
+}
+
+/* Piece masthead */
+.writing-piece-hero {
+    position: relative;
+    padding: 2rem 1.5rem 4.5rem;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(95, 31, 44, 0.14);
+    background:
+        radial-gradient(
+            circle at 16% 10%,
+            rgba(184, 90, 104, 0.2),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 88% 75%,
+            rgba(138, 47, 63, 0.12),
+            transparent 26%
+        ),
+        linear-gradient(145deg, #fbf7f5 0%, #ffffff 48%, #f2e2e5 100%);
+}
+
+.writing-piece-hero .breadcrumbs {
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+    margin-bottom: 2.35rem;
+}
+
+.writing-piece-hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1240px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.writing-piece-hero h1 {
+    max-width: 1220px;
+    margin: 0.75rem auto 0;
+    color: #2b1d1d;
+    font-size: clamp(2.7rem, 5.4vw, 4.85rem);
+    letter-spacing: -0.047em;
+    line-height: 1.02;
+    text-wrap: balance;
+}
+
+.writing-piece-kicker {
+    margin: 0;
+    color: var(--accent-dark);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    line-height: 1.4;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.writing-piece-deck {
+    max-width: 760px;
+    margin: 1.25rem auto 0;
+    color: #514042;
+    font-size: clamp(1.03rem, 2vw, 1.22rem);
+    line-height: 1.75;
+    text-align: center;
+    text-wrap: pretty;
+}
+
+.writing-piece-byline {
+    margin: 1rem auto 0;
+    color: #5e4d50;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.writing-piece-byline a {
+    display: inline;
+    color: var(--accent-dark);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 0.16em;
+}
+
+.writing-piece-meta {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    max-width: 940px;
+    margin: 2rem auto 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid rgba(138, 47, 63, 0.2);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 10px 28px rgba(36, 27, 27, 0.07);
+}
+
+.writing-piece-meta div {
+    min-width: 0;
+    padding: 1rem 0.85rem;
+}
+
+.writing-piece-meta div + div {
+    border-left: 1px solid rgba(138, 47, 63, 0.16);
+}
+
+.writing-piece-meta dt,
+.writing-piece-meta dd {
+    margin: 0;
+    text-align: center;
+}
+
+.writing-piece-meta dt {
+    color: #765f64;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.35;
+    text-transform: uppercase;
+}
+
+.writing-piece-meta dd {
+    margin-top: 0.3rem;
+    color: #37282a;
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.writing-piece-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.85rem;
+    margin-top: 1.8rem;
+}
+
+.writing-piece-context {
+    max-width: 820px;
+    margin: 2.2rem auto 0;
+    padding: 1.5rem 0 0;
+    border-top: 1px solid rgba(138, 47, 63, 0.2);
+}
+
+.writing-piece-context h2 {
+    margin: 0;
+    color: #3a292b;
+    font-size: 1.22rem;
+    text-align: center;
+}
+
+.writing-piece-context p {
+    margin: 0.65rem auto 0;
+    color: #5b494c;
+    line-height: 1.75;
+    text-align: center;
+    text-wrap: pretty;
+}
+
+/* Main reading surface */
+.writing-piece-container {
+    --writing-surface-max: 1120px;
+    --writing-content-max: 1000px;
+
+    box-sizing: border-box;
+    max-width: 1240px;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    overflow: visible;
+}
+
+.writing-piece-article {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: var(--writing-surface-max);
+    margin: 0 auto;
+    padding: clamp(2rem, 4vw, 3.25rem);
+    overflow: visible;
+    border: 1px solid rgba(95, 31, 44, 0.12);
+    border-radius: 20px;
+    background: #fffdf9;
+    box-shadow: 0 20px 50px rgba(47, 32, 32, 0.12);
+}
+
+.writing-story-header {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: var(--writing-content-max);
+    margin: 0 auto 3rem;
+    padding: clamp(1.5rem, 4vw, 2.25rem);
+    border: 1px solid rgba(138, 47, 63, 0.2);
+    border-radius: 14px;
+    background: linear-gradient(145deg, #fbf6f4, #f5e9eb);
+    color: var(--ink);
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(47, 32, 32, 0.07);
+}
+
+.writing-story-header p {
+    margin: 0;
+    text-align: center;
+}
+
+.writing-story-label {
+    color: var(--accent-dark);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.writing-story-header h2 {
+    margin: 0.65rem auto 0;
+    color: #251b1c;
+    font-size: clamp(1.9rem, 5vw, 3rem);
+    line-height: 1.15;
+    text-align: center;
+    text-wrap: balance;
+}
+
+.writing-story-author {
+    margin-top: 0.8rem !important;
+    color: #675557;
+    font-style: italic;
+}
+
+.writing-story {
+    width: 100%;
+    max-width: var(--writing-content-max);
+    margin: 0 auto;
+    color: #2f2626;
+    font-size: clamp(1rem, 1.4vw, 1.1rem);
+    line-height: 1.9;
+}
+
+.writing-story p {
+    margin: 0;
+    line-height: inherit;
+    text-align: left;
+    text-wrap: pretty;
+    widows: 3;
+    orphans: 3;
+}
+
+.writing-story p + p {
+    margin-top: 1.15em;
+}
+
+.writing-story a {
+    display: inline;
+    color: var(--accent-dark);
+    text-decoration: underline;
+    text-underline-offset: 0.17em;
+}
+
+.writing-story em {
+    font-style: italic;
+}
+
+.writing-beat {
+    margin-top: 1.8em !important;
+}
+
+.writing-display-line {
+    margin-top: 1.9em !important;
+    margin-bottom: 1.9em !important;
+    color: #241a1b;
+    font-size: clamp(1.12rem, 2vw, 1.32rem);
+    font-weight: 600;
+    line-height: 1.65 !important;
+}
+
+/* Signs and other text that intentionally breaks the prose rhythm */
+.writing-sign {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: var(--writing-content-max);
+    margin: 2rem auto;
+    padding: 1.2rem 1.35rem;
+    border: 2px solid #3f3838;
+    border-radius: 5px;
+    background: #f2f0e9;
+    color: #211d1d;
+    text-align: center;
+    box-shadow: 0 5px 0 rgba(36, 27, 27, 0.1);
+}
+
+.writing-sign p,
+.writing-sign strong {
+    margin: 0;
+    text-align: center;
+}
+
+.writing-sign--direction {
+    max-width: 410px;
+    padding: 0.9rem 1.2rem;
+    font-size: clamp(1.05rem, 2.5vw, 1.28rem);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 0.16em;
+}
+
+.writing-sign--hazard {
+    padding-top: 1.6rem;
+    padding-bottom: 1.55rem;
+}
+
+.writing-hazard-symbol {
+    display: block;
+    margin: 0.55rem 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(4.5rem, 14vw, 7rem);
+    line-height: 1;
+}
+
+.writing-sign--hazard p {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+}
+
+.writing-log-entry {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: var(--writing-content-max);
+    margin: 2rem auto;
+    padding: 1.35rem 1.5rem;
+    border-left: 4px solid var(--accent);
+    background: #f8f0e6;
+    color: #3c2a2c;
+    font-size: clamp(1.07rem, 2.2vw, 1.24rem);
+    font-style: italic;
+    line-height: 1.75;
+    text-align: center;
+    box-shadow: 0 8px 22px rgba(36, 27, 27, 0.07);
+}
+
+.writing-scene-break {
+    width: 72px;
+    height: 4px;
+    margin: 3.25rem auto;
+    border: 0;
+    border-radius: 999px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+.writing-scene-opener {
+    color: #271c1d;
+    font-size: clamp(1.14rem, 2vw, 1.3rem);
+    font-weight: 700;
+}
+
+/* Reusable figure, video, audio, and caption pattern for future pieces */
+.writing-figure {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: var(--writing-content-max);
+    margin: 2.5rem auto;
+}
+
+.writing-figure--wide {
+    width: min(92vw, 1040px);
+    max-width: none;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.writing-figure img,
+.writing-figure video,
+.writing-figure iframe {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    border: 1px solid rgba(95, 31, 44, 0.13);
+    border-radius: 12px;
+    background: #eee8e4;
+    box-shadow: 0 12px 30px rgba(36, 27, 27, 0.12);
+}
+
+.writing-figure iframe {
+    aspect-ratio: 16 / 9;
+    height: auto;
+}
+
+.writing-figure audio {
+    display: block;
+    width: 100%;
+}
+
+.writing-media-caption {
+    width: 100%;
+    max-width: var(--writing-content-max);
+    margin: 0.75rem auto 0;
+    color: #716164;
+    font-size: 0.86rem;
+    line-height: 1.55;
+    text-align: center;
+    font-style: italic;
+}
+
+/* End matter */
+.writing-piece-end {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: var(--writing-surface-max);
+    margin: 1.5rem auto 0;
+    padding: clamp(1.75rem, 5vw, 2.75rem);
+    border: 1px solid rgba(138, 47, 63, 0.16);
+    border-radius: 18px;
+    background: #ffffff;
+    text-align: center;
+    box-shadow: 0 10px 28px rgba(36, 27, 27, 0.08);
+}
+
+.writing-piece-end h2 {
+    margin: 0;
+    color: #332326;
+    text-align: center;
+}
+
+.writing-piece-end p {
+    max-width: 680px;
+    margin: 0.75rem auto 0;
+    color: #5b4c4e;
+    line-height: 1.75;
+    text-align: center;
+}
+
+.writing-piece-end .writing-piece-actions {
+    margin-top: 1.35rem;
+}
+
+@media (max-width: 800px) {
+    .writing-piece-meta {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .writing-piece-meta div + div {
+        border-left: 0;
+    }
+
+    .writing-piece-meta div:nth-child(even) {
+        border-left: 1px solid rgba(138, 47, 63, 0.16);
+    }
+
+    .writing-piece-meta div:nth-child(n + 3) {
+        border-top: 1px solid rgba(138, 47, 63, 0.16);
+    }
+}
+
+@media (max-width: 600px) {
+    .writing-piece-hero {
+        padding: 1.5rem 1rem 3.5rem;
+    }
+
+    .writing-piece-hero .breadcrumbs {
+        margin-bottom: 1.7rem;
+    }
+
+    .writing-piece-hero h1 {
+        font-size: clamp(2.35rem, 12vw, 3.35rem);
+    }
+
+    .writing-piece-meta {
+        grid-template-columns: 1fr;
+    }
+
+    .writing-piece-meta div:nth-child(even) {
+        border-left: 0;
+    }
+
+    .writing-piece-meta div + div,
+    .writing-piece-meta div:nth-child(n + 3) {
+        border-top: 1px solid rgba(138, 47, 63, 0.16);
+    }
+
+    .writing-piece-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .writing-piece-actions .writings-button {
+        width: 100%;
+    }
+
+    .writing-piece-container {
+        padding: 1rem 0.75rem 3rem;
+    }
+
+    .writing-piece-article {
+        padding: 2rem 1.15rem 2.5rem;
+        border-radius: 14px;
+    }
+
+    .writing-story-header {
+        margin-bottom: 2.2rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .writing-story {
+        line-height: 1.82;
+    }
+
+    .writing-sign {
+        margin-right: 0;
+        margin-left: 0;
+        padding-right: 0.9rem;
+        padding-left: 0.9rem;
+    }
+
+    .writing-log-entry {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .writing-figure--wide {
+        width: 100%;
+        margin-left: 0;
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .writing-progress {
+        transition: none;
+    }
+}
+
+@media print {
+    .writing-progress,
+    #header-placeholder,
+    #footer-placeholder,
+    .writing-piece-hero,
+    .writing-piece-end {
+        display: none !important;
+    }
+
+    .writing-piece-page,
+    .writing-piece-article {
+        background: #ffffff;
+    }
+
+    .writing-piece-container,
+    .writing-piece-article {
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-shadow: none;
+    }
+}

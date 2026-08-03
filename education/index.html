@@ -27,6 +27,28 @@
 
     <link rel="stylesheet" href="/assets/css/main.css">
     <script defer src="/assets/js/main.js"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "@id": "https://www.aaronschlossberg.com/education/#breadcrumbs",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.aaronschlossberg.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Education",
+                "item": "https://www.aaronschlossberg.com/education/"
+            }
+        ]
+    }
+    </script>
 </head>
 
 <body>
@@ -34,6 +56,13 @@
 
     <main>
         <section class="education-hero">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li aria-current="page">Education</li>
+                </ol>
+            </nav>
+            
             <h1>Education</h1>
             <p>
                 A timeline of my educational journey: the schools, programs, projects, and self-directed learning that has shaped my interests in technology, writing, entrepreneurship, creativity, and community-building.
@@ -53,7 +82,7 @@
                 <div class="timeline">
                     <article class="timeline-item">
                         <div class="timeline-year">Pre-K — 8th Grade</div>
-                        <h3><a style="color: black" href="/education/hebrew-academy/"> <u>Hebrew Academy</u></a></h3>
+                        <h3><a style="color: black" href="/education/hebrew-academy/" class="underlined-text">Hebrew Academy</a></h3>
                         <p>
                             My early educational foundation at the The Bess and Paul Sigel Hebrew Academy of Greater Hartford, covering “Nursery 4”, Kindergarten, and elementary and middle school.<br><br>
                         </p>
@@ -62,7 +91,7 @@
 
                     <article class="timeline-item">
                         <div class="timeline-year">High School</div>
-                        <h3><a style="color: black" href="/education/pathways-academy/"> <u>Pathways Academy of Technology and Design</u></a></h3>
+                        <h3><a style="color: black" href="/education/pathways-academy/" class="underlined-text">Pathways Academy of Technology and Design</a></h3>
                         <p>
                             My high school chapter, at Pathways Academy of Technology and Design, focused around technology, art, career exploration, and the path that helped lead me toward computer science, entrepreneurship, and creative projects.<br><br>
                         </p>
@@ -71,7 +100,7 @@
 
                     <article class="timeline-item">
                         <div class="timeline-year">College</div>
-                        <h3><a style="color: black" href="/education/muhlenberg/"> <u>Muhlenberg College</u></a></h3>
+                        <h3><a style="color: black" href="/education/muhlenberg/" class="underlined-text">Muhlenberg College</a></h3>
                         <p>
                             My college experience, including Computer Science, Innovation & Entrepreneurship, art, writing,
                             clubs, student leadership, “externships”, events, and personal growth.<br><br>
@@ -81,7 +110,7 @@
 
                     <article class="timeline-item">
                         <div class="timeline-year">Ongoing</div>
-                        <h3><a style="color: black" href="/education/lifelong-learning/"> <u>Lifelong Learning</u></a></h3>
+                        <h3><a style="color: black" href="/education/lifelong-learning/" class="underlined-text">Lifelong Learning</a></h3>
                         <p>
                             Self-directed learning beyond formal school, including online courses, certifications, books, tutorials, independent research, and skills I continue to build.<br><br>
                         </p>

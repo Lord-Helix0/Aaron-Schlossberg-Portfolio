@@ -1,0 +1,91 @@
+/*  BREADCRUMBS | Semantic page-location navigation used across the site. */
+
+.breadcrumbs {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto 1.15rem;
+    padding: 0;
+    color: #5b4d4f;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.breadcrumbs ol {
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    max-width: 100%;
+    margin: 0;
+    padding: 0.48rem 0.8rem;
+    border: 1px solid rgba(138, 47, 63, 0.2);
+    border-radius: 999px;
+    background: rgba(138, 47, 63, 0.07);
+    list-style: none;
+    box-shadow: 0 3px 12px rgba(36, 27, 27, 0.05);
+}
+
+.breadcrumbs li {
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+}
+
+.breadcrumbs li + li::before {
+    content: "›";
+    margin: 0 0.48rem;
+    color: var(--accent);
+    font-weight: 700;
+    opacity: 0.65;
+}
+
+.breadcrumbs a {
+    color: var(--accent-dark);
+    font-weight: 700;
+    text-decoration: none;
+    text-underline-offset: 0.16em;
+}
+
+.breadcrumbs a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+.breadcrumbs a:focus-visible {
+    border-radius: 4px;
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.breadcrumbs [aria-current="page"] {
+    color: var(--ink);
+    font-weight: 600;
+}
+
+/* Adds top spacing when breadcrumbs sit directly inside the page. */
+#header-placeholder + .breadcrumbs,
+#header-placeholder + br + .breadcrumbs,
+main > .breadcrumbs {
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 560px) {
+    .breadcrumbs {
+        font-size: 0.82rem;
+    }
+
+    .breadcrumbs ol {
+        width: fit-content;
+        padding: 0.55rem 0.7rem;
+        border-radius: 14px;
+    }
+
+    .breadcrumbs li + li::before {
+        margin-right: 0.36rem;
+        margin-left: 0.36rem;
+    }
+}

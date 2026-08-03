@@ -1,0 +1,31 @@
+/* ==========================================================
+   SITE VARIABLES / DESIGN TOKENS
+   ========================================================== */
+
+:root {
+    /* Main accent colors */
+    --accent: #8a2f3f;
+    --accent-dark: #5f1f2c;
+    --accent-light: #b85a68;
+    --accent-glow: rgba(138, 47, 63, 0.28);
+
+    /* General site colors */
+    --ink: #241b1b;
+    --paper: #f6f3f1;
+    --card: #ffffff;
+    --line: rgba(138, 47, 63, 0.35);
+}
+
+/*
+    --header-background: #333333;
+    --footer-background: #2d2020;
+    --page-background: #f4f4f4;
+
+    --content-width: 1100px;
+    --section-radius: 16px;
+    --section-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+    --space-small: 0.75rem;
+    --space-medium: 1.25rem;
+    --space-large: 2rem;
+*/

@@ -5,6 +5,7 @@ This is "**[Aaron Schlossberg's Universe](https://www.aaronschlossberg.com/)**";
 
 ## Website Contents
 - **Home**: [https://www.aaronschlossberg.com/](https://www.aaronschlossberg.com/)
+- **About Me**: [https://www.aaronschlossberg.com/about-me/](https://www.aaronschlossberg.com/about-me/)
 - **Education**: [https://www.aaronschlossberg.com/education/](https://www.aaronschlossberg.com/education/)
   - **Hebrew Academy**: [https://www.aaronschlossberg.com/education/hebrew-academy/](https://www.aaronschlossberg.com/education/hebrew-academy/)
   - **Pathways Academy**: [https://www.aaronschlossberg.com/education/pathways-academy/](https://www.aaronschlossberg.com/education/pathways-academy/)
@@ -16,7 +17,7 @@ This is "**[Aaron Schlossberg's Universe](https://www.aaronschlossberg.com/)**";
     - **Highlights**: [https://www.aaronschlossberg.com/education/muhlenberg/highlights/](https://www.aaronschlossberg.com/education/muhlenberg/highlights/)
   - **Lifelong Learning**: [https://www.aaronschlossberg.com/education/lifelong-learning/](https://www.aaronschlossberg.com/education/muhlenberg/lifelong-learning/)
 - **Projects**: [https://www.aaronschlossberg.com/projects/](https://aaronschlossberg.com/projects/)
-  - **Fiction2Reality embedded page**: [https://www.aaronschlossberg.com/projects/f2r/](https://www.aaronschlossberg.com/projects/f2r/)
+  - **F2R iFrame Viewer**: [https://www.aaronschlossberg.com/projects/f2r/](https://www.aaronschlossberg.com/projects/f2r/)
 - **Writings**: [https://www.aaronschlossberg.com/writings](https://www.aaronschlossberg.com/writings)
 - **Resume**: [https://www.aaronschlossberg.com/resume](https://www.aaronschlossberg.com/resume)
 - **Contact**: [https://www.aaronschlossberg.com/contact/](https://www.aaronschlossberg.com/contact/)
@@ -27,6 +28,7 @@ This is "**[Aaron Schlossberg's Universe](https://www.aaronschlossberg.com/)**";
   - **Art**: [https://www.aaronschlossberg.com/images/art/](https://www.aaronschlossberg.com/images/art/)
   - **Things I Love**: [https://www.aaronschlossberg.com/images/art/](https://www.aaronschlossberg.com/images/art/)
   - **Memes**: [https://www.aaronschlossberg.com/images/memes/](https://www.aaronschlossberg.com/images/memes/)
+- **Sitemap**: [https://www.aaronschlossberg.com/site-map/](https://www.aaronschlossberg.com/site-map/)
 
 ## Built With
 - HTML

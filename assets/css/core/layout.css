@@ -1,0 +1,67 @@
+/* ==========================================================
+   SHARED SITE LAYOUT
+   ========================================================== */
+
+/* Footer links */
+footer a:link,
+footer a:visited,
+footer a:hover,
+footer a:active {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    opacity: 0.8;
+}
+
+/* Main centered content container */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.25rem;
+}
+
+/* Standard large section block */
+.section {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem 1.75rem;
+    margin: 1.25rem 0;
+}
+
+/* General reusable card */
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    padding: 1rem;
+}
+
+.card + .card {
+    margin-top: 1rem;
+}
+
+/* Shared heading and body rhythm */
+h1,
+h2,
+h3 {
+    margin: 0 0 0.5rem;
+}
+
+h1 {
+    font-size: clamp(28px, 4vw, 40px);
+}
+
+h2 {
+    font-size: clamp(22px, 3vw, 30px);
+}
+
+h3 {
+    font-size: clamp(18px, 2.2vw, 22px);
+}
+
+p {
+    line-height: 1.7;
+}

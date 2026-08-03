@@ -1,0 +1,147 @@
+/* Highlights and Horizontal Carousel | Reusable for highlights */
+
+/* Grid layout for highlight cards *outside* a carousel */
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Individual highlight card */
+.highlight-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+    background: #ffffff;
+    color: inherit;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transition:
+        box-shadow 0.2s ease,
+        transform 0.1s ease;
+}
+
+.highlight-card:hover,
+.highlight-card:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-card:focus-visible {
+    outline: 3px solid var(--accent-light);
+    outline-offset: 3px;
+}
+
+.highlight-card .highlight-card__image {
+    display: block;
+    width: 100%;
+    max-width: 90%;
+    height: 160px;
+    margin: 1.5rem auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.highlight-card .highlight-card__content {
+    padding: 12px 14px 16px;
+}
+
+.highlight-card .highlight-card__title {
+    margin: 0 0 6px;
+    font-size: 1rem;
+    line-height: 1.3;
+}
+
+.highlight-card .highlight-card__meta {
+    margin: 0;
+    color: #666666;
+    font-size: 0.85rem;
+    font-style: italic;
+    opacity: 0.75;
+}
+
+.highlight-card .highlight-card__meta strong {
+    font-weight: 400;
+}
+
+/* Source-agnostic horizontal carousel */
+.carousel {
+    --carousel-item-width: 320px;
+
+    position: relative;
+    max-width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 4px 8px 12px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-track > [data-carousel-item] {
+    flex: 0 0 var(--carousel-item-width);
+    max-width: var(--carousel-item-width);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #dddddd;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #222222;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    transform: translateY(-50%);
+}
+
+.carousel-btn:hover,
+.carousel-btn:focus-visible {
+    transform: translateY(-50%) scale(1.06);
+}
+
+.carousel-btn-prev {
+    left: -14px;
+}
+
+.carousel-btn-next {
+    right: -14px;
+}
+
+@media (max-width: 700px) {
+    .carousel {
+        --carousel-item-width: 280px;
+    }
+
+    .carousel-btn-prev {
+        left: -6px;
+    }
+
+    .carousel-btn-next {
+        right: -6px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .highlight-card,
+    .carousel-track {
+        scroll-behavior: auto;
+        transition: none;
+    }
+}

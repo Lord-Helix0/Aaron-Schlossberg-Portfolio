@@ -11,15 +11,15 @@
 
     <url>
         <loc>https://www.aaronschlossberg.com/</loc>
-        <lastmod>2026-07-15T20:03:42+00:00</lastmod>
+        <lastmod>2026-08-02</lastmod>
     </url>
     <url>
         <loc>https://www.aaronschlossberg.com/about-me/</loc>
-        <lastmod>2026-07-24</lastmod>
+        <lastmod>2026-08-02</lastmod>
     </url>
     <url>
           <loc>https://www.aaronschlossberg.com/education/</loc>
-          <lastmod>2026-07-15</lastmod>
+          <lastmod>2026-08-02</lastmod>
     </url>
     <!-- <url>
           <loc>https://www.aaronschlossberg.com/education/hebrew-academy/</loc>
@@ -31,11 +31,11 @@
     </url> -->
     <url>
           <loc>https://www.aaronschlossberg.com/education/muhlenberg/</loc>
-          <lastmod>2026-07-15</lastmod>
+          <lastmod>2026-08-02</lastmod>
     </url>
     <url>
           <loc>https://www.aaronschlossberg.com/education/muhlenberg/clubs/</loc>
-          <lastmod>2026-07-15</lastmod>
+          <lastmod>2026-08-02</lastmod>
     </url>
     <!-- <url>
           <loc>https://www.aaronschlossberg.com/education/muhlenberg/clubs/pokemon-club/</loc>
@@ -51,7 +51,7 @@
     </url> -->
     <url>
           <loc>https://www.aaronschlossberg.com/education/muhlenberg/clubs/fencing-video/</loc>
-          <lastmod>2026-07-15</lastmod>
+          <lastmod>2026-08-02</lastmod>
     </url>
     <!-- <url>
           <loc>https://www.aaronschlossberg.com/education/muhlenberg/clubs/mbga/</loc>
@@ -91,31 +91,35 @@
     </url> -->
     <url>
           <loc>https://www.aaronschlossberg.com/projects/</loc>
-          <lastmod>2026-07-15</lastmod>
+          <lastmod>2026-08-02</lastmod>
     </url>
     <url>
           <loc>https://www.aaronschlossberg.com/projects/f2r/</loc>
-          <lastmod>2026-07-15</lastmod>
+          <lastmod>2026-08-02</lastmod>
     </url>
-    <!-- <url>
+    <url>
           <loc>https://www.aaronschlossberg.com/writings/</loc>
-          <lastmod>2026-06-22</lastmod>
-    </url> -->
+          <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+          <loc>https://www.aaronschlossberg.com/writings/1080-paths-of-least-resistance/</loc>
+          <lastmod>2026-08-03</lastmod>
+    </url>
     <url>
           <loc>https://www.aaronschlossberg.com/resume/</loc>
-          <lastmod>2026-07-15</lastmod>
+          <lastmod>2026-08-02</lastmod>
     </url>
     <url>
           <loc>https://www.aaronschlossberg.com/contact/</loc>
-          <lastmod>2026-07-15</lastmod>
+          <lastmod>2026-08-02</lastmod>
     </url>
     <url>
           <loc>https://www.aaronschlossberg.com/images/</loc>
-          <lastmod>2026-07-15</lastmod>
+          <lastmod>2026-08-02</lastmod>
     </url>
     <url>
           <loc>https://www.aaronschlossberg.com/images/pictures-of-me/</loc>
-          <lastmod>2026-07-15</lastmod>
+          <lastmod>2026-08-02</lastmod>
     </url>
     <!-- <url>
           <loc>https://www.aaronschlossberg.com/images/photos-ive-taken/</loc>
@@ -139,6 +143,6 @@
     </url> -->
     <url>
           <loc>https://www.aaronschlossberg.com/site-map/</loc>
-          <lastmod>2026-07-15</lastmod>
+          <lastmod>2026-08-02</lastmod>
     </url>
 </urlset>

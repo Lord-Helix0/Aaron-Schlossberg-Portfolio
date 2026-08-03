@@ -1,0 +1,46 @@
+/* ==========================================================
+   REUSABLE UTILITY CLASSES
+   ========================================================== */
+
+/*
+   A reusable flex row for card groups.
+
+   Cards wrap onto additional rows as needed. When the final row
+   contains fewer than the maximum number of cards, those cards
+   remain centered instead of aligning to the left.
+*/
+.centered-card-row {
+    --card-width: 320px;
+    --card-row-gap: 1.25rem;
+    --card-row-max-width: 1000px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: var(--card-row-gap);
+
+    width: 100%;
+    max-width: var(--card-row-max-width);
+    margin-inline: auto;
+}
+
+.centered-card-row > * {
+    box-sizing: border-box;
+    flex: 0 1 var(--card-width);
+    width: 100%;
+    min-width: 0;
+    max-width: var(--card-width);
+}
+
+/* Allow cards to fill the available width on smaller screens */
+@media (max-width: 700px) {
+    .centered-card-row {
+        max-width: 100%;
+    }
+
+    .centered-card-row > * {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}

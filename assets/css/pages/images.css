@@ -1,0 +1,245 @@
+/* Images Section
+   - /images/
+   - /images/pictures-of-me/ */
+
+/* Images hub hero. */
+.images-hero {
+    text-align: center;
+}
+
+.images-hero h1 {
+    margin-bottom: 0.75rem;
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    text-align: center;
+}
+
+.images-hero p {
+    max-width: 760px;
+    margin: 0 auto;
+    font-size: 1.08rem;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* Images hub card grid. */
+.image-hub-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 948px;
+    margin: 0 auto;
+}
+
+.image-hub-card {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 1 300px;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 300px;
+    min-height: 210px;
+    padding: 1.35rem;
+    border: 1px solid rgba(138, 47, 63, 0.18);
+    border-radius: 18px;
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(138, 47, 63, 0.13),
+            transparent 38%
+        ),
+        #ffffff;
+    color: var(--ink);
+    text-align: left;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease,
+        border-color 0.18s ease;
+}
+
+.image-hub-card:hover,
+.image-hub-card:focus-visible {
+    border-color: var(--accent);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.13);
+    transform: translateY(-4px);
+}
+
+.image-hub-card h2 {
+    margin: 0 0 0.5rem;
+    color: var(--accent-dark);
+    text-align: left;
+}
+
+.image-hub-card p {
+    flex-grow: 1;
+    margin: 0;
+    color: #3d3333;
+    line-height: 1.65;
+    text-align: left;
+}
+
+.image-hub-card span {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: 1rem;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+/* "Pictures of Me" hero. */
+.pictures-hero {
+    text-align: center;
+}
+
+.pictures-hero h1 {
+    margin-bottom: 0.75rem;
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    text-align: center;
+}
+
+.pictures-hero > p {
+    max-width: 780px;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* Gallery subsection navigation. */
+.gallery-subnav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.gallery-subnav a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.45rem 0.85rem;
+    border: 1px solid rgba(138, 47, 63, 0.18);
+    border-radius: 999px;
+    background: rgba(138, 47, 63, 0.1);
+    color: var(--accent-dark);
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+        color 0.16s ease,
+        background 0.16s ease,
+        border-color 0.16s ease,
+        transform 0.16s ease;
+}
+
+.gallery-subnav a:hover,
+.gallery-subnav a:focus-visible {
+    border-color: rgba(138, 47, 63, 0.35);
+    background: rgba(138, 47, 63, 0.17);
+    color: var(--accent-dark);
+    transform: translateY(-1px);
+}
+
+/* Photo-card grid. */
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1.5rem;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.photo-card {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 1 320px;
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid rgba(138, 47, 63, 0.16);
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.photo-card img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 340px;
+    margin: 0;
+    border-radius: 0;
+    background: #f4eeee;
+    object-fit: contain;
+    object-position: center;
+    box-shadow: none;
+}
+
+.photo-card figcaption {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+}
+
+.photo-card h3 {
+    margin: 0 0 0.4rem;
+    color: var(--accent-dark);
+    text-align: center;
+}
+
+.photo-card p {
+    max-width: none;
+    margin: 0 auto;
+    color: #3d3333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.photo-card p a {
+    display: inline;
+}
+
+@media (max-width: 1100px) {
+    .photo-card {
+        flex-basis: 300px;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 700px) {
+    .image-hub-grid {
+        max-width: 520px;
+    }
+
+    .image-hub-card {
+        flex-basis: 100%;
+        max-width: 100%;
+        min-height: 0;
+    }
+
+    .photo-grid {
+        gap: 1.25rem;
+    }
+
+    .photo-card {
+        flex-basis: 100%;
+        max-width: 450px;
+    }
+
+    .photo-card img {
+        height: auto;
+        max-height: 480px;
+        aspect-ratio: auto;
+    }
+}

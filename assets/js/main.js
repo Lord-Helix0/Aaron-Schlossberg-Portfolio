@@ -164,10 +164,18 @@ function initCarousels() {
         const prev = carousel.querySelector(".carousel-btn-prev");
         const next = carousel.querySelector(".carousel-btn-next");
 
-        if (!track || !prev || !next || track.dataset.carouselReady === "true") return;
+        if (
+            !track ||
+            !prev ||
+            !next ||
+            track.dataset.carouselReady === "true"
+        ) {
+            return;
+        }
 
-        const originalCards = Array.from(track.children);
-        if (originalCards.length <= 1) {
+        const originalItems = Array.from(track.children);
+
+        if (originalItems.length <= 1) {
             prev.style.display = "none";
             next.style.display = "none";
             return;
@@ -175,45 +183,60 @@ function initCarousels() {
 
         track.dataset.carouselReady = "true";
 
-        originalCards.forEach((card) => {
-            track.appendChild(card.cloneNode(true));
+        originalItems.forEach((item) => {
+            track.appendChild(item.cloneNode(true));
         });
 
-        originalCards.slice().reverse().forEach((card) => {
-            track.insertBefore(card.cloneNode(true), track.firstChild);
-        });
+        originalItems
+            .slice()
+            .reverse()
+            .forEach((item) => {
+                track.insertBefore(item.cloneNode(true), track.firstChild);
+            });
 
         const getOriginalWidth = () => track.scrollWidth / 3;
 
         requestAnimationFrame(() => {
-        track.scrollLeft = getOriginalWidth();
+            track.scrollLeft = getOriginalWidth();
         });
 
         function getStep() {
-            const card = track.querySelector(".quora-card");
-            if (!card) return 320;
+            const item = track.querySelector("[data-carousel-item]");
+
+            if (!item) {
+                return 320;
+            }
 
             const gap = parseFloat(getComputedStyle(track).gap) || 0;
-            return card.getBoundingClientRect().width + gap;
+
+            return item.getBoundingClientRect().width + gap;
         }
 
         function keepInfinite() {
-        const originalWidth = getOriginalWidth();
+            const originalWidth = getOriginalWidth();
 
-        if (track.scrollLeft >= originalWidth * 2) {
-            track.scrollLeft -= originalWidth;
-        } else if (track.scrollLeft <= 0) {
-            track.scrollLeft += originalWidth;
-        }
+            if (track.scrollLeft >= originalWidth * 2) {
+                track.scrollLeft -= originalWidth;
+            } else if (track.scrollLeft <= 0) {
+                track.scrollLeft += originalWidth;
+            }
         }
 
         next.addEventListener("click", () => {
-            track.scrollBy({ left: getStep(), behavior: "smooth" });
+            track.scrollBy({
+                left: getStep(),
+                behavior: "smooth"
+            });
+
             setTimeout(keepInfinite, 450);
         });
 
         prev.addEventListener("click", () => {
-            track.scrollBy({ left: -getStep(), behavior: "smooth" });
+            track.scrollBy({
+                left: -getStep(),
+                behavior: "smooth"
+            });
+
             setTimeout(keepInfinite, 450);
         });
 

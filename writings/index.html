@@ -3,32 +3,455 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Writings | Aaron Schlossberg's Universe</title>
-    <meta property="og:site_name" content="Aaron Schlossberg‘s Universe">
-    <meta name="application-name" content="Aaron Schlossberg">
 
-    <!-- Link sharing preview image -->
+    <title>Writings | Aaron Schlossberg’s Universe</title>
+    <meta name="description" content="Explore Aaron Schlossberg’s writing portfolio, including fiction, technical and explanatory writing, essays, scripts, copywriting, and creative work.">
+    <meta name="author" content="Aaron L. Schlossberg">
+    <meta name="application-name" content="Aaron Schlossberg">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#333333">
+    <meta name="p:domain_verify" content="52b00b635022ac45300143d277f42d6d">
+
+    <link rel="canonical" href="https://www.aaronschlossberg.com/writings/">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Aaron Schlossberg’s Universe">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Writings by Aaron Schlossberg">
+    <meta property="og:description" content="Fiction, technical and explanatory writing, essays, scripts, copywriting, and other creative work by Aaron Schlossberg.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.aaronschlossberg.com/writings/">
     <meta property="og:image" content="https://www.aaronschlossberg.com/assets/img/og-aaron-schlossbergs-universe.png">
+    <meta property="og:image:secure_url" content="https://www.aaronschlossberg.com/assets/img/og-aaron-schlossbergs-universe.png">
+    <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Picture of Aaron Schlossberg smiling in front of Nachi Falls in Japan, with a circular crop. Name 'Aaron Schlossberg' and title 'Computer Scientist, Entrepreneur, Writer' are displayed in the image, along with 'Aaron Schlossberg's Universe' and 'aaronschlossberg.com'.">
-    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image:alt" content="Aaron Schlossberg smiling in front of Nachi Falls in Japan, alongside his name, the words Computer Scientist, Entrepreneur, Writer, and the site name Aaron Schlossberg’s Universe.">
 
+    <!-- X / Twitter link preview -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@aschloss04">
+    <meta name="twitter:title" content="Writings by Aaron Schlossberg">
+    <meta name="twitter:description" content="Explore fiction, technical and explanatory writing, essays, scripts, copywriting, and other creative work by Aaron Schlossberg.">
+    <meta name="twitter:image" content="https://www.aaronschlossberg.com/assets/img/og-aaron-schlossbergs-universe.png">
+    <meta name="twitter:image:alt" content="Aaron Schlossberg and the title Aaron Schlossberg’s Universe, with the words Computer Scientist, Entrepreneur, Writer.">
+
+    <!-- Lora -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="/assets/css/main.css">
     <script defer src="/assets/js/main.js"></script>
+    <script defer src="/assets/js/pages/writings.js"></script>
+
+    <!-- Page and breadcrumb structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "CollectionPage",
+                "@id": "https://www.aaronschlossberg.com/writings/#webpage",
+                "url": "https://www.aaronschlossberg.com/writings/",
+                "name": "Writings by Aaron Schlossberg",
+                "headline": "Writings",
+                "description": "A writing portfolio by Aaron Schlossberg featuring fiction, technical and explanatory writing, essays, scripts, copywriting, and other creative work.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                    "@id": "https://www.aaronschlossberg.com/#website"
+                },
+                "author": {
+                    "@id": "https://www.aaronschlossberg.com/#person"
+                },
+                "about": {
+                    "@id": "https://www.aaronschlossberg.com/#person"
+                },
+                "breadcrumb": {
+                    "@id": "https://www.aaronschlossberg.com/writings/#breadcrumbs"
+                },
+                "keywords": [
+                    "Creative writing",
+                    "Technical writing",
+                    "Expository writing",
+                    "Essays",
+                    "Scripts",
+                    "Copywriting",
+                    "Fiction"
+                ]
+            },
+            {
+                "@type": "Person",
+                "@id": "https://www.aaronschlossberg.com/#person",
+                "name": "Aaron L. Schlossberg",
+                "alternateName": "Aaron Schlossberg",
+                "url": "https://www.aaronschlossberg.com/about-me/"
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://www.aaronschlossberg.com/#website",
+                "url": "https://www.aaronschlossberg.com/",
+                "name": "Aaron Schlossberg’s Universe",
+                "publisher": {
+                    "@id": "https://www.aaronschlossberg.com/#person"
+                },
+                "inLanguage": "en-US"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://www.aaronschlossberg.com/writings/#breadcrumbs",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.aaronschlossberg.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Writings",
+                        "item": "https://www.aaronschlossberg.com/writings/"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
 </head>
 
 <body>
     <div id="header-placeholder"></div>
 
-    <main>
-        <div id="page-construction-placeholder"></div>
-    </main>
-    <!-- The word "raconteur" -->
+    <main class="writings-page">
+        <section class="writings-hero">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li aria-current="page">Writings</li>
+                </ol>
+            </nav>
 
-    <!-- <div id="footer-placeholder"></div> -->
+            <div class="writings-hero-inner">
+                <h1>Writings</h1>
+
+                <p class="writings-hero-types">
+                    Fiction
+                    <span aria-hidden="true">•</span>
+                    Technical
+                    <span aria-hidden="true">•</span>
+                    Expository
+                    <span aria-hidden="true">•</span>
+                    Scripts
+                    <span aria-hidden="true">•</span>
+                    Copywriting
+                    <span aria-hidden="true">•</span>
+                    More
+                </p>
+
+                <p class="writings-hero-summary">
+                    I write across fiction, technical, explanatory, and audience-focused forms. My work often brings together storytelling, technology, knowledge, worldbuilding, and the challenge of making ambitious ideas clear and engaging.
+                </p>
+
+                <div class="writings-hero-actions">
+                    <a class="writings-button writings-button-primary" href="#browse-writing">
+                        Browse My Writing
+                    </a>
+                    <a class="writings-button writings-button-secondary" href="/contact/">
+                        Contact Me About Writing
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="container writings-page-container">
+            <section class="section writings-introduction" aria-labelledby="writing-introduction-title">
+                <div class="writings-section-heading">
+                    <h2 id="writing-introduction-title">Writing Across Forms</h2>
+                </div>
+
+                <div class="writings-prose writings-introduction-copy">
+                    <p>
+                        My writing is both creative and practical: I write fiction stories, essays, scripts, technical explanations, website and social content, and general world-building. It has grown through creative writing courses, Computer Science and entrepreneurship, my social media internship with <a href="/education/muhlenberg/">Muhlenberg College</a>’s English Literatures &amp; Creative Writing department, and independent <a href="/projects/">ventures</a> of mine such as <a href="https://www.fiction2reality.com/" target="_blank" rel="noopener noreferrer nofollow">Fiction2Reality</a>.
+                    </p>
+
+                    <p>
+                        Across those formats, I care about clarity, voice, structure, and revising, whether I am building a fictional world, explaining a complicated idea, or helping an ambitious project communicate what it is trying to become.
+                    </p>
+                </div>
+            </section>
+
+            <section
+                class="section writings-catalog-section"
+                id="browse-writing"
+                aria-labelledby="browse-writing-title"
+                data-writings-catalog>
+                <div class="writings-section-heading">
+                    <h2 id="browse-writing-title">Browse My Writing</h2>
+                    <p>
+                        Search by title, subject, project, or context, or filter the collection by type. A piece can appear under more than one type when its form crosses categories.
+                    </p>
+                </div>
+
+                <div class="writings-catalog-controls">
+                    <div class="writings-search-field">
+                        <label for="writing-search">Search the collection</label>
+                        <div class="writings-search-input-row">
+                            <input
+                                id="writing-search"
+                                type="search"
+                                inputmode="search"
+                                autocomplete="off"
+                                placeholder="Try a title, topic, course, or project…"
+                                data-writing-search>
+                            <button type="button" class="writings-clear-search" data-clear-search>
+                                Clear search
+                            </button>
+                        </div>
+                    </div>
+
+                    <fieldset class="writings-filter-group">
+                        <legend>Filter by type</legend>
+                        <div class="writings-filter-buttons" data-writing-filters>
+                            <button type="button" data-writing-filter="all" aria-pressed="true">All</button>
+                            <button type="button" data-writing-filter="fiction" aria-pressed="false">Fiction</button>
+                            <button type="button" data-writing-filter="technical" aria-pressed="false">Technical</button>
+                            <button type="button" data-writing-filter="essay" aria-pressed="false">Essays &amp; Nonfiction</button>
+                            <button type="button" data-writing-filter="script" aria-pressed="false">Scripts</button>
+                            <button type="button" data-writing-filter="copywriting" aria-pressed="false">Copywriting &amp; Content</button>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="writings-results-bar">
+                    <p data-writing-results-count aria-live="polite">8 pieces shown</p>
+                    <button type="button" class="writings-reset-filters" data-reset-writing-filters>
+                        Reset search and filters
+                    </button>
+                </div>
+
+                <div class="writings-piece-grid" data-writing-grid>
+                    <article
+                        class="writings-piece-card"
+                        data-writing-card
+                        data-writing-types="fiction"
+                        data-search-terms="short story creative writing muhlenberg college muses publication technology identity">
+                        <div class="writings-piece-tags" aria-label="Writing types">
+                            <span>Fiction</span>
+                            <span>Short Story</span>
+                        </div>
+                        <h3>1080 Paths of Least Resistance</h3>
+                        <p class="writings-piece-summary">
+                            A revised short fiction piece developed through my creative-writing work at <a href="/education/muhlenberg/">Muhlenberg College</a> and accepted by <cite>MUSES</cite>.
+                        </p>
+                        <dl class="writings-piece-meta">
+                            <div><dt>Context</dt><dd>Muhlenberg College</dd></div>
+                            <div><dt>Status</dt><dd>Accepted for publication</dd></div>
+                        </dl>
+                        <a class="writings-piece-action writings-button writings-button-primary" href="/writings/1080-paths-of-least-resistance/" aria-label="Read 1080 Paths of Least Resistance">Read this piece</a>
+                    </article>
+
+                    <!-- "The Equation of Quiet" fiction story -->
+                    <!-- <article
+                        class="writings-piece-card"
+                        data-writing-card
+                        data-writing-types="fiction"
+                        data-search-terms="creative writing short fiction muhlenberg college">
+                        <div class="writings-piece-tags" aria-label="Writing types">
+                            <span>Fiction</span>
+                        </div>
+                        <h3>The Equation of Quiet</h3>
+                        <p class="writings-piece-summary">
+                            A selected work from my creative-fiction portfolio, developed through drafting and revision.
+                        </p>
+                        <dl class="writings-piece-meta">
+                            <div><dt>Context</dt><dd>Creative Writing</dd></div>
+                            <div><dt>Format</dt><dd>Fiction</dd></div>
+                        </dl>
+                        <a class="writings-piece-action writings-button writings-button-primary" href="/writings/equation-of-quiet/" aria-label="Read Equation of Quiet">Read this piece</a>
+                    </article> -->
+
+                    <!-- "We Have Everything (Fiction2Reality)" script -->
+                    <!-- <article
+                        class="writings-piece-card"
+                        data-writing-card
+                        data-writing-types="script fiction"
+                        data-search-terms="fiction2reality f2r backrooms liminal spaces short video screenplay treatment production">
+                        <div class="writings-piece-tags" aria-label="Writing types">
+                            <span>Script</span>
+                            <span>Fiction</span>
+                        </div>
+                        <h3>We Have Everything (Fiction2Reality)</h3>
+                        <p class="writings-piece-summary">
+                            A short-video script and narrative treatment for a Fiction2Reality story that moves from an ordinary swimming pool into the Backrooms.
+                        </p>
+                        <dl class="writings-piece-meta">
+                            <div><dt>Project</dt><dd>Fiction2Reality</dd></div>
+                            <div><dt>Status</dt><dd>In production</dd></div>
+                        </dl>
+                        <a class="writings-piece-action writings-button writings-button-primary" href="/writings/lazy-descent/" aria-label="Read Lazy Descent">Read this piece</a>
+                    </article> -->
+
+                    <!-- Itsukushima Research-->
+                    <!-- <article
+                        class="writings-piece-card"
+                        data-writing-card
+                        data-writing-types="essay"
+                        data-search-terms="itsukushima miyajima japan pilgrimage religion tourism research annotated bibliography muhlenberg">
+                        <div class="writings-piece-tags" aria-label="Writing types">
+                            <span>Essay &amp; Nonfiction</span>
+                            <span>Research</span>
+                        </div>
+                        <h3>Itsukushima Pilgrimage Research</h3>
+                        <p class="writings-piece-summary">
+                            Research and explanatory writing on pilgrimage, sacred space, tourism, and the experience of visiting Itsukushima and Miyajima.
+                        </p>
+                        <dl class="writings-piece-meta">
+                            <div><dt>Context</dt><dd>Muhlenberg College</dd></div>
+                            <div><dt>Focus</dt><dd>Research &amp; Analysis</dd></div>
+                        </dl>
+                        <a class="writings-piece-action writings-button writings-button-primary" href="/writings/itsukushima-pilgrimage-research/" aria-label="Read Itsukushima Pilgrimage Research">Read this piece</a>
+                    </article> -->
+
+                    <!-- Muhlenberg English content-->
+                    <!-- <article
+                        class="writings-piece-card"
+                        data-writing-card
+                        data-writing-types="copywriting"
+                        data-search-terms="muhlenberg college english literatures creative writing social media instagram facebook internship captions interviews events">
+                        <div class="writings-piece-tags" aria-label="Writing types">
+                            <span>Copywriting &amp; Content</span>
+                            <span>Social Media</span>
+                        </div>
+                        <h3>Muhlenberg English Social Content</h3>
+                        <p class="writings-piece-summary">
+                            Selected interview, event, caption, and campaign writing created for Muhlenberg’s English Literatures &amp; Creative Writing department.
+                        </p>
+                        <dl class="writings-piece-meta">
+                            <div><dt>Context</dt><dd>Department Internship</dd></div>
+                            <div><dt>Channels</dt><dd>Instagram &amp; Facebook</dd></div>
+                        </dl>
+                        <a class="writings-piece-action writings-button writings-button-primary" href="/writings/muhlenberg-english-social-content/" aria-label="Read Muhlenberg English Social Content">Read this piece</a>
+                    </article> -->
+
+                    <!-- Fiction2Reality Copy/Branding-->
+                    <!-- <article
+                        class="writings-piece-card"
+                        data-writing-card
+                        data-writing-types="copywriting fiction"
+                        data-search-terms="fiction2reality f2r website brand copy worldbuilding backrooms immersive project production narrative">
+                        <div class="writings-piece-tags" aria-label="Writing types">
+                            <span>Copywriting &amp; Content</span>
+                            <span>Narrative &amp; Worldbuilding</span>
+                        </div>
+                        <h3>Fiction2Reality Website &amp; Brand Writing</h3>
+                        <p class="writings-piece-summary">
+                            Website copy, project explanations, creative direction, and worldbuilding language for a venture focused on turning fictional spaces into explorable experiences.
+                        </p>
+                        <dl class="writings-piece-meta">
+                            <div><dt>Project</dt><dd>Fiction2Reality</dd></div>
+                            <div><dt>Focus</dt><dd>Brand &amp; Narrative</dd></div>
+                        </dl>
+                        <a class="writings-piece-action  writings-button writings-button-primary" href="/writings/fiction2reality-website-brand-writing/" aria-label="Read Fiction2Reality Website and Brand Writing">Read this piece</a>
+                    </article> -->
+
+                    <!-- KeepUp Technical(?) Writing-->
+                    <!-- <article
+                        class="writings-piece-card"
+                        data-writing-card
+                        data-writing-types="technical copywriting"
+                        data-search-terms="keepup bookkeeping react typescript capstone software help documentation interface product explanation">
+                        <div class="writings-piece-tags" aria-label="Writing types">
+                            <span>Technical</span>
+                            <span>Product Writing</span>
+                        </div>
+                        <h3>KeepUp Help &amp; Project Writing</h3>
+                        <p class="writings-piece-summary">
+                            User-facing explanations and project material for KeepUp, a React and TypeScript bookkeeping prototype developed as a Computer Science capstone.
+                        </p>
+                        <dl class="writings-piece-meta">
+                            <div><dt>Context</dt><dd>Computer Science Capstone</dd></div>
+                            <div><dt>Audience</dt><dd>Software Users</dd></div>
+                        </dl>
+                        <a class="writings-piece-action writings-button writings-button-primary" href="/writings/keepup-help-project-writing/" aria-label="Read KeepUp Help and Project Writing">Read this piece</a>
+                    </article> -->
+
+                    <!-- Mayvene Product Vision-->
+                    <!-- <article
+                        class="writings-piece-card"
+                        data-writing-card
+                        data-writing-types="copywriting technical essay"
+                        data-search-terms="mayvene question answer platform entrepreneurship product vision website copy pitch explanation knowledge community">
+                        <div class="writings-piece-tags" aria-label="Writing types">
+                            <span>Product Writing</span>
+                            <span>Explanatory</span>
+                        </div>
+                        <h3>Mayvene Product Vision &amp; Copy</h3>
+                        <p class="writings-piece-summary">
+                            Product, website, and explanatory writing for a proposed Q&amp;A platform centered on thoughtful questions, substantial answers, and better incentives.
+                        </p>
+                        <dl class="writings-piece-meta">
+                            <div><dt>Project</dt><dd>Mayvene</dd></div>
+                            <div><dt>Focus</dt><dd>Product &amp; Vision</dd></div>
+                        </dl>
+                        <a class="writings-piece-action writings-button writings-button-primary" href="/writings/mayvene-product-vision-copy/" aria-label="Read Mayvene Product Vision and Copy">Read this piece</a>
+                    </article> -->
+                </div>
+
+                <div class="writings-no-results" data-writing-no-results hidden>
+                    <h3>No matching pieces</h3>
+                    <p>Try a different search term, choose another writing type, or reset the catalog.</p>
+                    <button type="button" data-reset-writing-filters>Show all writing</button>
+                </div>
+            </section>
+
+            <section class="section writings-elsewhere-section" id="writing-elsewhere" aria-labelledby="writing-elsewhere-title">
+                <div class="writings-section-heading">
+                    <h2 id="writing-elsewhere-title">Writing Elsewhere</h2>
+                    <p>
+                        This portfolio is the central home for selected pieces. You can also find writing, answers, and ongoing updates on these platforms.
+                    </p>
+                </div>
+
+                <div class="writings-external-grid">
+                    <a class="writings-external-card" data-config-link="quora" data-external href="https://www.quora.com/profile/Aaron-L-Schlossberg/" target="_blank" rel="noopener noreferrer">
+                        <span class="writings-external-label">Questions &amp; Answers</span>
+                        <h3>Quora</h3>
+                        <p>Browse my answers, explanations, perspectives, and discussions.</p>
+                        <span class="writings-external-action">Visit my Quora <span aria-hidden="true">↗</span></span>
+                    </a>
+
+                    <a class="writings-external-card" data-config-link="medium" data-external href="https://aaron-schlossberg.medium.com/" target="_blank" rel="noopener noreferrer">
+                        <span class="writings-external-label">Articles &amp; Essays</span>
+                        <h3>Medium</h3>
+                        <p>Visit my profile for articles, essays, and other published writing.</p>
+                        <span class="writings-external-action">Visit my Medium <span aria-hidden="true">↗</span></span>
+                    </a>
+
+                    <a class="writings-external-card" data-config-link="substack" data-external href="https://substack.com/@aaronschlossberg" target="_blank" rel="noopener noreferrer">
+                        <span class="writings-external-label">Long-Form Updates</span>
+                        <h3>Substack</h3>
+                        <p>Read longer-form posts, project notes, and creative-process updates.</p>
+                        <span class="writings-external-action">Visit my Substack <span aria-hidden="true">↗</span></span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="writings-contact-section" id="writing-contact" aria-labelledby="writing-contact-title">
+                <h2 id="writing-contact-title">Interested in Working With Me?</h2>
+                <p>
+                    I am interested in writing, content, technical communication, and narrative opportunities. If you would like to discuss a role, collaboration, or project, I would be glad to hear from you.
+                </p>
+
+                <div class="writings-contact-actions">
+                    <a class="writings-button writings-button-light" href="/contact/">Contact Me</a>
+                    <a class="writings-button writings-button-outline-light" href="/resume/">View My Résumé</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
 </body>
 </html>
