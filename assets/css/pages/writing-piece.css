@@ -596,3 +596,651 @@
         box-shadow: none;
     }
 }
+
+/* Share hub */
+body.writing-share-open {
+    overflow: hidden;
+}
+
+.writing-share-trigger {
+    cursor: pointer;
+}
+
+.writing-share-dialog,
+.writing-share-modal {
+    box-sizing: border-box;
+    width: min(94vw, 720px);
+    max-width: 720px;
+    max-height: min(88vh, 760px);
+    margin: auto;
+    padding: 0;
+    overflow: visible;
+    border: 0;
+    border-radius: 24px;
+    background: transparent;
+    color: var(--ink);
+    font-family: "Lora", serif;
+}
+
+.writing-share-dialog button,
+.writing-share-dialog a {
+    font-family: "Lora", serif;
+}
+
+.writing-share-dialog:not([open]),
+.writing-share-dialog[hidden],
+.writing-share-modal[hidden] {
+    display: none !important;
+}
+
+.writing-share-dialog::backdrop {
+    background: rgba(31, 22, 23, 0.68);
+    backdrop-filter: blur(6px);
+}
+
+.writing-share-modal {
+    position: fixed;
+    z-index: 11000;
+    inset: 0;
+    display: grid;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    max-height: none;
+    padding: 1rem;
+    place-items: center;
+    border-radius: 0;
+    background: rgba(31, 22, 23, 0.68);
+    backdrop-filter: blur(6px);
+}
+
+.writing-share-panel,
+.writing-share-dialog__panel,
+[data-share-panel] {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    max-height: min(88vh, 760px);
+    padding: clamp(1.35rem, 4vw, 2.25rem);
+    overflow-y: auto;
+    border: 1px solid rgba(138, 47, 63, 0.17);
+    border-radius: 24px;
+    background:
+        radial-gradient(
+            circle at 100% 0%,
+            rgba(184, 90, 104, 0.16),
+            transparent 32%
+        ),
+        #fffdfb;
+    box-shadow: 0 28px 80px rgba(30, 20, 22, 0.28);
+}
+
+.writing-share-kicker,
+.writing-share-dialog-kicker,
+.writing-share-eyebrow {
+    margin: 0;
+    color: var(--accent-dark);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.writing-share-header,
+.writing-share-dialog-header,
+[data-share-header] {
+    max-width: 570px;
+    margin: 0 auto;
+    padding-inline: 2.6rem;
+    text-align: center;
+}
+
+.writing-share-header h2,
+.writing-share-dialog-header h2,
+.writing-share-title,
+#writing-share-title,
+[data-share-title] {
+    margin: 0.35rem 0 0;
+    color: #2f2022;
+    font-size: clamp(1.75rem, 5vw, 2.35rem);
+    line-height: 1.18;
+    text-align: center;
+}
+
+.writing-share-description,
+.writing-share-dialog-description,
+#writing-share-description,
+[data-share-description] {
+    margin: 0.65rem 0 0;
+    color: #655457;
+    line-height: 1.65;
+    text-align: center;
+}
+
+.writing-share-close {
+    position: absolute;
+    z-index: 1;
+    top: 1rem;
+    right: 1rem;
+    display: inline-grid;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: 1px solid rgba(138, 47, 63, 0.18);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.86);
+    color: #4c3639;
+    font: inherit;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    place-items: center;
+    box-shadow: 0 6px 18px rgba(36, 27, 27, 0.08);
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.writing-share-close:hover {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: #ffffff;
+    transform: rotate(4deg);
+}
+
+.writing-share-native {
+    box-sizing: border-box;
+    display: flex;
+    width: fit-content;
+    min-height: 42px;
+    margin: 1.25rem auto 1rem;
+    padding: 0.65rem 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.45rem;
+    border: 2px solid var(--accent);
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    color: #ffffff;
+    font-family: "Lora", serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: center;
+    box-shadow: 0 8px 22px rgba(95, 31, 44, 0.16);
+    transition:
+        background 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.writing-share-native-icon {
+    display: inline-grid;
+    flex: 0 0 auto;
+    place-items: center;
+}
+
+.writing-share-native-icon svg {
+    display: block;
+    width: 17px;
+    height: 17px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.writing-share-native:hover,
+.writing-share-native:focus-visible {
+    background: linear-gradient(135deg, var(--accent-light), var(--accent));
+    box-shadow: 0 12px 28px var(--accent-glow);
+    transform: translateY(-2px);
+}
+
+.writing-share-native[hidden] {
+    display: none !important;
+}
+
+.writing-share-divider {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 1.2rem 0;
+    color: #8a767a;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.writing-share-divider::before,
+.writing-share-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: rgba(138, 47, 63, 0.16);
+}
+
+.writing-share-grid,
+.writing-share-options {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+}
+
+.writing-share-option {
+    box-sizing: border-box;
+    display: flex;
+    min-width: 0;
+    min-height: 92px;
+    padding: 0.9rem 0.7rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.45rem;
+    border: 1px solid rgba(138, 47, 63, 0.16);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.82);
+    color: #493538;
+    font: inherit;
+    font-size: 0.86rem;
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 7px 20px rgba(36, 27, 27, 0.06);
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.writing-share-option:hover,
+.writing-share-option:focus-visible {
+    border-color: var(--accent);
+    background: #fff8f7;
+    color: var(--accent-dark);
+    box-shadow: 0 11px 25px rgba(95, 31, 44, 0.13);
+    transform: translateY(-2px);
+}
+
+.writing-share-icon,
+.writing-share-option-icon {
+    display: inline-grid;
+    flex: 0 0 auto;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(138, 47, 63, 0.1);
+    color: var(--accent-dark);
+    font-size: 1rem;
+    line-height: 1;
+    place-items: center;
+}
+
+.writing-share-icon svg,
+.writing-share-option-icon svg {
+    display: block;
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.writing-share-icon--link svg,
+.writing-share-icon--email svg {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.writing-share-icon--facebook {
+    background: rgba(24, 119, 242, 0.11);
+    color: #1877f2;
+}
+
+.writing-share-icon--linkedin {
+    background: rgba(10, 102, 194, 0.11);
+    color: #0a66c2;
+}
+
+.writing-share-icon--linkedin svg {
+    width: 17px;
+    height: 19px;
+}
+
+.writing-share-icon--x {
+    background: rgba(15, 20, 25, 0.09);
+    color: #0f1419;
+}
+
+.writing-share-icon--bluesky {
+    background: rgba(2, 133, 255, 0.11);
+    color: #0285ff;
+}
+
+.writing-share-status {
+    min-height: 1.5em;
+    margin: 0.9rem 0 0;
+    color: var(--accent-dark);
+    font-size: 0.86rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Related Writing */
+.writing-related,
+.writing-related-section,
+[data-related-writing] {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: var(--writing-surface-max, 1120px);
+    margin: 1.5rem auto 0;
+    padding: clamp(1.75rem, 5vw, 3rem);
+    border: 1px solid rgba(138, 47, 63, 0.16);
+    border-radius: 18px;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.93), rgba(255, 255, 255, 0.93)),
+        linear-gradient(135deg, #f6e8eb, #ffffff);
+    box-shadow: 0 10px 28px rgba(36, 27, 27, 0.08);
+}
+
+.writing-related-header,
+.writing-related-heading,
+.writing-related-section-heading {
+    max-width: 760px;
+    margin: 0 auto 1.5rem;
+    text-align: center;
+}
+
+.writing-related-kicker {
+    margin: 0;
+    color: var(--accent-dark);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.writing-related-header h2,
+.writing-related-heading h2,
+.writing-related-section-heading h2 {
+    margin: 0.35rem 0 0;
+    color: #332326;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    line-height: 1.2;
+    text-align: center;
+}
+
+.writing-related-intro,
+.writing-related-description {
+    margin: 0.7rem auto 0;
+    color: #66575a;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.writing-related-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+.writing-related-card {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 calc((100% - 2rem) / 3);
+    min-width: 0;
+    min-height: 280px;
+    padding: 1.25rem;
+    flex-direction: column;
+    border: 1px solid rgba(138, 47, 63, 0.16);
+    border-radius: 15px;
+    background: #ffffff;
+    color: #3d3032;
+    box-shadow: 0 8px 22px rgba(36, 27, 27, 0.07);
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.writing-related-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0;
+}
+
+.writing-related-tags span {
+    display: inline-flex;
+    padding: 0.3rem 0.55rem;
+    border: 1px solid rgba(138, 47, 63, 0.17);
+    border-radius: 999px;
+    background: #f8edef;
+    color: var(--accent-dark);
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    line-height: 1.25;
+    text-transform: uppercase;
+}
+
+.writing-related-card:hover,
+.writing-related-card:focus-within {
+    border-color: rgba(138, 47, 63, 0.36);
+    box-shadow: 0 14px 30px rgba(95, 31, 44, 0.13);
+    transform: translateY(-3px);
+}
+
+.writing-related-type,
+.writing-related-meta {
+    margin: 0;
+    color: var(--accent-dark);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.writing-related-card h3 {
+    margin: 0.75rem 0 0;
+    color: #2f2224;
+    font-size: 1.25rem;
+    line-height: 1.3;
+    text-align: left;
+}
+
+.writing-related-card h3 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.writing-related-card h3 a:hover,
+.writing-related-card h3 a:focus-visible {
+    color: var(--accent-dark);
+}
+
+.writing-related-summary,
+.writing-related-card p:not(.writing-related-type):not(.writing-related-meta) {
+    margin: 0.75rem 0 0;
+    color: #65575a;
+    font-size: 0.94rem;
+    line-height: 1.65;
+    text-align: left;
+}
+
+.writing-related-meta {
+    display: flex;
+    margin: 1rem 0 0;
+}
+
+.writing-related-meta div {
+    display: grid;
+    gap: 0.18rem;
+}
+
+.writing-related-meta dt,
+.writing-related-meta dd {
+    margin: 0;
+}
+
+.writing-related-meta dt {
+    color: var(--accent-dark);
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.35;
+    text-transform: uppercase;
+}
+
+.writing-related-meta dd {
+    color: #5f5053;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.45;
+    text-transform: none;
+}
+
+.writing-related-link {
+    align-self: center;
+    margin-top: auto;
+    padding: 0.65rem 1rem;
+    min-height: 42px;
+    font-size: 0.86rem;
+}
+
+.writing-related-empty,
+.writing-related-fallback {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 1.4rem;
+    border: 1px dashed rgba(138, 47, 63, 0.28);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.72);
+    text-align: center;
+}
+
+.writing-related-empty p,
+.writing-related-fallback p {
+    margin: 0;
+    color: #66575a;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.writing-related-empty a,
+.writing-related-fallback a {
+    display: inline;
+    color: var(--accent-dark);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 0.17em;
+}
+
+.writing-related-browse {
+    display: flex;
+    width: fit-content;
+    max-width: 100%;
+    margin: 1.75rem auto 0;
+}
+
+@media (max-width: 900px) {
+    .writing-related-card {
+        flex-basis: calc((100% - 1rem) / 2);
+    }
+}
+
+@media (max-width: 600px) {
+    .writing-share-dialog,
+    .writing-share-modal {
+        width: min(100% - 1rem, 720px);
+    }
+
+    .writing-share-modal {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .writing-share-panel,
+    .writing-share-dialog__panel,
+    [data-share-panel] {
+        max-height: 92vh;
+        padding: 1.25rem;
+        border-radius: 18px;
+    }
+
+    .writing-share-header,
+    .writing-share-dialog-header,
+    [data-share-header] {
+        padding-inline: 2.4rem;
+    }
+
+    .writing-share-grid,
+    .writing-share-options {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .writing-share-option {
+        min-height: 84px;
+    }
+
+    .writing-related,
+    .writing-related-section,
+    [data-related-writing] {
+        padding: 1.5rem 1rem;
+    }
+
+    .writing-related-card {
+        flex-basis: 100%;
+        min-height: 0;
+    }
+
+    .writing-related-browse {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .writing-share-close,
+    .writing-share-native,
+    .writing-share-option,
+    .writing-related-card {
+        transition: none;
+    }
+
+    .writing-share-close:hover,
+    .writing-share-native:hover,
+    .writing-share-native:focus-visible,
+    .writing-share-option:hover,
+    .writing-share-option:focus-visible,
+    .writing-related-card:hover,
+    .writing-related-card:focus-within {
+        transform: none;
+    }
+}
+
+@media print {
+    .writing-share-dialog,
+    .writing-share-modal,
+    .writing-share-trigger,
+    .writing-related,
+    .writing-related-section,
+    [data-related-writing] {
+        display: none !important;
+    }
+}
