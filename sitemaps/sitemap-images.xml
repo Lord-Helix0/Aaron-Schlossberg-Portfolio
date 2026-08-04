@@ -122,6 +122,37 @@
         </image:image>
     </url>
 
+    <url>
+        <loc>
+            https://www.aaronschlossberg.com/writings/1080-paths-of-least-resistance/
+        </loc>
+        <lastmod>2026-08-04</lastmod>
+
+        <image:image>
+            <image:loc>
+                https://www.aaronschlossberg.com/assets/img/writings/1080-paths-of-least-resistance/fork-protruding-from-wall-alexander-lee.png
+            </image:loc>
+        </image:image>
+
+        <image:loc>
+                https://www.aaronschlossberg.com/assets/img/writings/1080-paths-of-least-resistance/maintenance-nook-alexander-lee.png
+            </image:loc>
+        </image:image>
+    </url>
+
+    <!-- <url>
+        <loc>
+            https://www.aaronschlossberg.com/placehold.co/
+        </loc>
+        <lastmod>2026-06-29</lastmod>
+
+        <image:image>
+            <image:loc>
+                https://www.aaronschlossberg.com/placehold.co/
+            </image:loc>
+        </image:image>
+    </url> -->
+
     <!-- <url>
         <loc>
             https://www.aaronschlossberg.com/placehold.co/
