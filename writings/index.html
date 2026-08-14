@@ -44,6 +44,7 @@
 
     <link rel="stylesheet" href="/assets/css/main.css">
     <script defer src="/assets/js/main.js"></script>
+    <script defer src="/assets/js/pages/writings-search.js"></script>
     <script defer src="/assets/js/pages/writings.js"></script>
 
     <!-- Page and breadcrumb structured data -->
@@ -173,7 +174,7 @@
 
                 <div class="writings-prose writings-introduction-copy">
                     <p>
-                        My writing is both creative and practical: I write fiction stories, essays, scripts, technical explanations, website and social content, and general world-building. It has grown through creative writing courses, Computer Science and entrepreneurship, my social media internship with <a href="/education/muhlenberg/">Muhlenberg College</a>’s English Literatures &amp; Creative Writing department, and independent <a href="/projects/">ventures</a> of mine such as <a href="https://www.fiction2reality.com/" target="_blank" rel="noopener noreferrer nofollow">Fiction2Reality</a>.
+                        I write fiction stories, essays, scripts, technical explanations, website and social content, and general world-building. It has grown through creative writing courses, Computer Science and entrepreneurship, my social media internship with <a href="/education/muhlenberg/">Muhlenberg College</a>’s English Literatures &amp; Creative Writing department, and independent <a href="/projects/">ventures</a> of mine such as <a href="https://www.fiction2reality.com/" target="_blank" rel="noopener noreferrer nofollow">Fiction2Reality</a>.
                     </p>
 
                     <p>
@@ -190,7 +191,7 @@
                 <div class="writings-section-heading">
                     <h2 id="browse-writing-title">Browse My Writing</h2>
                     <p>
-                        Search by title, subject, project, or context, or filter the collection by type. A piece can appear under more than one type when its form crosses categories.
+                        Search by title, subject, project, context, or words within the pieces themselves. Results are ranked by relevance, and can be narrowed with the available filters.
                     </p>
                 </div>
 
@@ -203,12 +204,23 @@
                                 type="search"
                                 inputmode="search"
                                 autocomplete="off"
-                                placeholder="Try a title, topic, course, or project…"
+                                placeholder="Try typing a title, topic, project, or phrase from a piece..."
                                 data-writing-search>
                             <button type="button" class="writings-clear-search" data-clear-search>
                                 Clear search
                             </button>
                         </div>
+                        <p class="writings-search-help italic-text">
+                            <small>Tips: Put quotation marks around an exact phrase. | Close spelling mistakes may still work.</small>
+                        </p>
+
+                        <p
+                            class="writings-search-status"
+                            data-writing-search-status
+                            role="status"
+                            aria-live="polite">
+                            Loading complete writing search...
+                        </p>
                     </div>
 
                     <fieldset class="writings-filter-group">
@@ -222,10 +234,69 @@
                             <button type="button" data-writing-filter="copywriting" aria-pressed="false">Copywriting &amp; Content</button>
                         </div>
                     </fieldset>
+
+                    <div
+                        class="writings-additional-filters"
+                        data-writing-additional-filters
+                        aria-labelledby="additional-writing-filters-title"
+                        hidden>
+
+                        <p id="additional-writing-filters-title">
+                            Filter further
+                        </p>
+
+                        <div
+                            class="writings-additional-filter"
+                            data-additional-filter
+                            hidden>
+                            <label for="writing-context-filter">
+                                Context or project
+                            </label>
+                            <select
+                                id="writing-context-filter"
+                                data-writing-context-filter>
+                                <option value="all">
+                                    All contexts and projects
+                                </option>
+                            </select>
+                        </div>
+
+                        <div
+                            class="writings-additional-filter"
+                            data-additional-filter
+                            hidden>
+                            <label for="writing-year-filter">
+                                Year
+                            </label>
+                            <select
+                                id="writing-year-filter"
+                                data-writing-year-filter>
+                                <option value="all">
+                                    All years
+                                </option>
+                            </select>
+                        </div>
+
+                        <div
+                            class="writings-additional-filter"
+                            data-additional-filter
+                            hidden>
+                            <label for="writing-status-filter">
+                                Status
+                            </label>
+                            <select
+                                id="writing-status-filter"
+                                data-writing-status-filter>
+                                <option value="all">
+                                    All statuses
+                                </option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="writings-results-bar">
-                    <p data-writing-results-count aria-live="polite">8 pieces shown</p>
+                    <p data-writing-results-count aria-live="polite">2 pieces shown</p>
                     <button type="button" class="writings-reset-filters" data-reset-writing-filters>
                         Reset search and filters
                     </button>
@@ -238,18 +309,47 @@
                         data-writing-types="fiction"
                         data-search-terms="short story creative writing muhlenberg college muses publication technology identity">
                         <div class="writings-piece-tags" aria-label="Writing types">
-                            <span>Fiction</span>
-                            <span>Short Story</span>
+                            <span><small>Fiction</small></span>
+                            <span><small>Short Story</small></span>
+                            <span><small>Speculative Horror</small></span>
                         </div>
                         <h3>1080 Paths of Least Resistance</h3>
                         <p class="writings-piece-summary">
-                            A revised short fiction piece developed through my creative-writing work at <a href="/education/muhlenberg/">Muhlenberg College</a> and accepted by <cite>MUSES</cite>.
+                            Sal and 1080 enter the Complex.<br><small>A product of my creative writing work at <a href="/education/muhlenberg/">Muhlenberg College</a>. Accepted by <cite>MUSES</cite>.</small>
                         </p>
                         <dl class="writings-piece-meta">
                             <div><dt>Context</dt><dd>Muhlenberg College</dd></div>
                             <div><dt>Status</dt><dd>Accepted for publication</dd></div>
                         </dl>
                         <a class="writings-piece-action writings-button writings-button-primary" href="/writings/1080-paths-of-least-resistance/" aria-label="Read 1080 Paths of Least Resistance">Read this piece</a>
+                    </article>
+
+                    <article
+                        class="writings-piece-card" data-writing-card data-writing-types="fiction" data-search-terms="short story creative writing muhlenberg college muses publication speculative horror envy desire morality supernatural abilities">
+                        <div class="writings-piece-tags">
+                            <span><small>Fiction</small></span>
+                            <span><small>Short Story</small></span>
+                            <span><small>Speculative Horror</small></span>
+                        </div>
+
+                        <h3>Just This Once</h3>
+
+                        <p class="writings-piece-summary">
+                            Speculative horror about envy and temptation.<br><small>A product of my creative writing work at <a href="/education/muhlenberg/">Muhlenberg College</a>. Accepted by <cite>MUSES</cite>.</small>
+                        </p>
+
+                        <dl class="writings-piece-meta">
+                            <div>
+                                <dt>Context</dt>
+                                <dd>Muhlenberg College</dd>
+                            </div>
+                            <div>
+                                <dt>Status</dt>
+                                <dd>Accepted for publication</dd>
+                            </div>
+                        </dl>
+
+                        <a class="writings-piece-action writings-button writings-button-primary" href="/writings/just-this-once/" aria-label="Read Just This Once">Read this piece</a>
                     </article>
 
                     <!-- "The Equation of Quiet" fiction story -->
@@ -401,7 +501,7 @@
 
                 <div class="writings-no-results" data-writing-no-results hidden>
                     <h3>No matching pieces</h3>
-                    <p>Try a different search term, choose another writing type, or reset the catalog.</p>
+                    <p>Try a different term, remove quotation marks, change a filter, or reset the catalog.</p>
                     <button type="button" data-reset-writing-filters>Show all writing</button>
                 </div>
             </section>

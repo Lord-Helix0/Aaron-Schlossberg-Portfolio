@@ -1,0 +1,13 @@
+{
+    "minimumTypoLength": 4,
+    "synonymGroups": [
+        ["fiction2reality", "fiction to reality", "f2r"],
+        ["q&a", "q and a", "questions and answers", "qanda", "QNA"],
+        ["copywriting", "copy writing"],
+        ["worldbuilding", "world building", "world-building"],
+        ["science fiction", "sci-fi", "scifi"],
+        ["computer science", "cs"],
+        ["muhlenberg", "muhlenberg college"],
+        ["backrooms", "liminal spaces", "liminal space", "liminal complex", "the complex"]
+    ]
+}

@@ -410,6 +410,10 @@
     transform: translateX(-50%);
 }
 
+.writing-figure--square {
+    max-width: 570px;
+}
+
 .writing-figure img,
 .writing-figure video,
 .writing-figure iframe {

@@ -47,7 +47,8 @@
 .writings-hero-inner {
     position: relative;
     z-index: 1;
-    max-width: 960px;
+    width: 100%;
+    max-width: 1280px;
     margin: 0 auto;
     text-align: center;
 }
@@ -79,7 +80,8 @@
 }
 
 .writings-hero-summary {
-    max-width: 800px;
+    width: 100%;
+    max-width: 1120px;
     margin: 1.35rem auto 0;
     color: #4d3d3d;
     font-size: clamp(1.05rem, 2vw, 1.22rem);
@@ -163,11 +165,13 @@
 }
 
 .writings-page .section {
-    padding: clamp(2rem, 5vw, 3.5rem);
+    padding-block: clamp(2rem, 5vw, 3.5rem);
+    padding-inline: clamp(1.25rem, 2.5vw, 2rem);
 }
 
 .writings-section-heading {
-    max-width: 850px;
+    width: 100%;
+    max-width: none;
     margin: 0 auto 2rem;
     text-align: center;
 }
@@ -223,7 +227,8 @@
 }
 
 .writings-introduction-copy {
-    max-width: 860px;
+    width: 100%;
+    max-width: none;
     margin: 0 auto;
 }
 
@@ -281,6 +286,20 @@
 .writings-search-input-row input::placeholder {
     color: #847575;
     opacity: 1;
+}
+
+.writings-search-help,
+.writings-search-status {
+    margin: 0.55rem 0 0;
+    color: #746466;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.writings-search-status {
+    margin-top: 0.2rem;
+    font-style: italic;
 }
 
 .writings-clear-search,
@@ -373,6 +392,54 @@
     color: #ffffff;
 }
 
+.writings-additional-filters {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.8rem;
+    margin-top: 1.2rem;
+    padding-top: 1.1rem;
+    border-top: 1px solid rgba(138, 47, 63, 0.15);
+}
+
+.writings-additional-filters[hidden],
+.writings-additional-filter[hidden] {
+    display: none;
+}
+
+.writings-additional-filters > p {
+    grid-column: 1 / -1;
+    margin: 0;
+    color: #392b2b;
+    font-size: 0.94rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.writings-additional-filter {
+    min-width: 0;
+}
+
+.writings-additional-filter label {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: #5d484b;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.writings-additional-filter select {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 44px;
+    padding: 0.6rem 2.2rem 0.6rem 0.75rem;
+    border: 1px solid rgba(95, 31, 44, 0.3);
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #392b2b;
+    font: inherit;
+    font-size: 0.88rem;
+}
+
 .writings-results-bar {
     display: flex;
     justify-content: space-between;
@@ -443,6 +510,7 @@
 .writings-piece-tags {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 0.4rem;
     margin-bottom: 0.9rem;
 }
@@ -467,7 +535,7 @@
     color: #372628;
     font-size: clamp(1.2rem, 2vw, 1.42rem);
     line-height: 1.32;
-    text-align: left;
+    text-align: center;
 }
 
 .writings-piece-summary {
@@ -517,6 +585,52 @@
 .writings-piece-action {
     align-self: center;
     margin-top: 1rem;
+}
+
+.writings-search-match {
+    margin-top: 0.9rem;
+    padding: 0.75rem 0.8rem;
+    border: 1px solid rgba(138, 47, 63, 0.16);
+    border-radius: 11px;
+    background: #faf6f5;
+}
+
+.writings-search-match[hidden] {
+    display: none;
+}
+
+.writings-search-match-label,
+.writings-search-match-excerpt {
+    margin: 0;
+    text-align: left;
+}
+
+.writings-search-match-label {
+    color: var(--accent-dark);
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.035em;
+    line-height: 1.35;
+    text-transform: uppercase;
+}
+
+.writings-search-match-excerpt {
+    margin-top: 0.42rem;
+    color: #4b3c3c;
+    font-size: 0.84rem;
+    line-height: 1.55;
+}
+
+.writings-search-match-excerpt[hidden] {
+    display: none;
+}
+
+.writings-search-match-excerpt mark {
+    padding: 0 0.08em;
+    border-radius: 2px;
+    background: #f4d880;
+    color: #2d2323;
+    font-weight: 700;
 }
 
 .writings-no-results {
@@ -680,6 +794,10 @@
     .writings-external-card {
         min-height: 0;
     }
+
+    .writings-additional-filters {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 @media (max-width: 680px) {
@@ -760,6 +878,10 @@
     .writings-contact-section {
         padding: 2.2rem 1.25rem;
         border-radius: 16px;
+    }
+
+    .writings-additional-filters {
+        grid-template-columns: 1fr;
     }
 }
 

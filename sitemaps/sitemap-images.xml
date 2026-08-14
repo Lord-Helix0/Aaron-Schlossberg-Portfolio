@@ -134,8 +134,22 @@
             </image:loc>
         </image:image>
 
-        <image:loc>
+        <image:image>
+            <image:loc>
                 https://www.aaronschlossberg.com/assets/img/writings/1080-paths-of-least-resistance/maintenance-nook-alexander-lee.png
+            </image:loc>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>
+            https://www.aaronschlossberg.com/writings/just-this-once/
+        </loc>
+        <lastmod>2026-08-13</lastmod>
+
+        <image:image>
+            <image:loc>
+                https://www.aaronschlossberg.com/assets/img/writings/just-this-once/just-this-once-concept-art-aaron-schlossberg.png
             </image:loc>
         </image:image>
     </url>

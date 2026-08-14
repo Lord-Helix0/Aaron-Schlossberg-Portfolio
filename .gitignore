@@ -1,2 +1,5 @@
-.DS_Store.DS_Store
+.DS_Store
+node_modules/
+_site/
+/assets/data/writings-search-index.json
 /test/
