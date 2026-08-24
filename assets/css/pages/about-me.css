@@ -1,18 +1,10 @@
-/* ==========================================================
-   ABOUT ME PAGE
-   /about-me/
-   ========================================================== */
-
+/* ===== "About Me" Page /about-me/ ===== */
 .about-page-container {
     padding-top: 2rem;
     padding-bottom: 3rem;
 }
 
-
-/* ----------------------------------------------------------
-   Hero
-   ---------------------------------------------------------- */
-
+/* Hero */
 .about-hero {
     position: relative;
     overflow: hidden;
@@ -146,11 +138,7 @@
         0 0 0 1px rgba(95, 31, 44, 0.1);
 }
 
-
-/* ----------------------------------------------------------
-   General headings and prose
-   ---------------------------------------------------------- */
-
+/* General headings and prose */
 .about-section-heading {
     margin: 0 0 2rem;
     text-align: center;
@@ -179,11 +167,7 @@
     line-height: 1.85;
 }
 
-
-/* ----------------------------------------------------------
-   Focus cards
-   ---------------------------------------------------------- */
-
+/* Focus cards */
 .about-focus-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -263,11 +247,7 @@
     text-decoration: underline;
 }
 
-
-/* ----------------------------------------------------------
-   Project rows
-   ---------------------------------------------------------- */
-
+/* Project rows */
 .about-project-list {
     border-top: 1px solid rgba(95, 31, 44, 0.13);
 }
@@ -313,35 +293,33 @@
 }
 
 
-/* ----------------------------------------------------------
-   Interest tags
-   ---------------------------------------------------------- */
-
+/* Interest tags */
 .about-interest-list {
+    --interest-tag-font-size: var(--text-size-extra-small);
+    --interest-tag-padding-block: 0.28rem;
+    --interest-tag-padding-inline: 0.68rem;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.7rem;
+    gap: 0.5rem;
 }
 
 .about-interest-list span {
     display: inline-flex;
     align-items: center;
-    min-height: 38px;
-    padding: 0.55rem 0.95rem;
+    min-height: 28px;
+    padding: var(--interest-tag-padding-block)
+        var(--interest-tag-padding-inline);
     border: 1px solid rgba(138, 47, 63, 0.17);
     border-radius: 999px;
     background: #fbf6f7;
     color: #4c383c;
-    font-size: 0.94rem;
+    font-size: var(--interest-tag-font-size);
     line-height: 1.2;
 }
 
-
-/* ----------------------------------------------------------
-   Philosophy and future
-   ---------------------------------------------------------- */
-
+/* Philosophy and future */
 .about-two-column-section {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));

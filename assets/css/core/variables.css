@@ -1,7 +1,4 @@
-/* ==========================================================
-   SITE VARIABLES / DESIGN TOKENS
-   ========================================================== */
-
+/* Site Variables/Design Tokens */
 :root {
     /* Main accent colors */
     --accent: #8a2f3f;
@@ -14,18 +11,8 @@
     --paper: #f6f3f1;
     --card: #ffffff;
     --line: rgba(138, 47, 63, 0.35);
+
+    /* Reusable text sizes */
+    --text-size-small: 0.825rem;
+    --text-size-extra-small: 0.75rem;
 }
-
-/*
-    --header-background: #333333;
-    --footer-background: #2d2020;
-    --page-background: #f4f4f4;
-
-    --content-width: 1100px;
-    --section-radius: 16px;
-    --section-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-
-    --space-small: 0.75rem;
-    --space-medium: 1.25rem;
-    --space-large: 2rem;
-*/

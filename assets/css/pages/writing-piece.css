@@ -1248,3 +1248,57 @@ body.writing-share-open {
         display: none !important;
     }
 }
+
+.writing-story .writing-knowledge-link {
+    padding: 0 0.06em;
+    border-radius: 3px;
+    background: linear-gradient(
+        to top,
+        rgba(29, 91, 122, 0.14) 0 42%,
+        transparent 42%
+    );
+    color: #174f6c;
+    font-weight: 600;
+    text-decoration-color: rgba(23, 79, 108, 0.55);
+}
+
+.writing-story .writing-knowledge-link:hover,
+.writing-story .writing-knowledge-link:focus-visible {
+    background-color: rgba(29, 91, 122, 0.12);
+    color: #103b53;
+}
+
+.writing-related-knowledge {
+    border-color: rgba(29, 91, 122, 0.22);
+    background:
+        linear-gradient(
+            rgba(255, 255, 255, 0.93),
+            rgba(255, 255, 255, 0.93)
+        ),
+        linear-gradient(135deg, #e8f4f7, #ffffff);
+}
+
+.writing-related-knowledge .writing-related-kicker,
+.writing-related-knowledge-card h3 a,
+.writing-related-knowledge-card
+    .writing-related-meta dt {
+    color: #174f6c;
+}
+
+.writing-related-knowledge-card {
+    border-color: rgba(29, 91, 122, 0.2);
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(79, 145, 170, 0.14),
+            transparent 34%
+        ),
+        #ffffff;
+}
+
+.writing-related-knowledge-card
+    .writing-related-tags span {
+    border-color: rgba(29, 91, 122, 0.18);
+    background: #eaf4f6;
+    color: #174f6c;
+}

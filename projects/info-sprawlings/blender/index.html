@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blender | Info Sprawlings</title>
+    <meta name="description" content="What Blender is, how its 3D scenes and workflows fit together, what it is used for, and how it connects to animation, rendering, Python, Fiction2Reality, and Just This Once.">
+    <meta name="author" content="Aaron L. Schlossberg">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#153f5c">
+
+    <link rel="canonical" href="https://www.aaronschlossberg.com/projects/info-sprawlings/blender/">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+
+    <meta property="og:site_name" content="Aaron Schlossberg’s Universe">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Blender | Info Sprawlings">
+    <meta property="og:description" content="A connected explanation of Blender, its major 3D workflows, and how its pieces fit together.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aaronschlossberg.com/projects/info-sprawlings/blender/">
+    <meta property="og:image" content="https://www.aaronschlossberg.com/assets/img/Backrooms_testing_in_Blender.png">
+    <meta property="og:image:alt" content="A yellow-walled Backrooms environment being developed in Blender.">
+    <meta property="article:published_time" content="2026-08-21">
+    <meta property="article:modified_time" content="2026-08-21">
+    <meta property="article:author" content="Aaron L. Schlossberg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@aschloss04">
+    <meta name="twitter:title" content="Blender | Info Sprawlings">
+    <meta name="twitter:description" content="What Blender is, what it does, and how its 3D workflows connect.">
+    <meta name="twitter:image" content="https://www.aaronschlossberg.com/assets/img/Backrooms_testing_in_Blender.png">
+    <meta name="twitter:image:alt" content="A yellow-walled Backrooms environment being developed in Blender.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script defer src="/assets/js/main.js"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Article",
+                "@id": "https://www.aaronschlossberg.com/projects/info-sprawlings/blender/#article",
+                "url": "https://www.aaronschlossberg.com/projects/info-sprawlings/blender/",
+                "headline": "Blender",
+                "description": "A connected explanation of Blender, its major 3D workflows, and how its pieces fit together.",
+                "datePublished": "2026-08-21",
+                "dateModified": "2026-08-21",
+                "inLanguage": "en-US",
+                "author": {
+                    "@id": "https://www.aaronschlossberg.com/#person"
+                },
+                "isPartOf": {
+                    "@id": "https://www.aaronschlossberg.com/projects/info-sprawlings/#webpage"
+                },
+                "about": {
+                    "@id": "https://www.aaronschlossberg.com/projects/info-sprawlings/blender/#software"
+                },
+                "image": "https://www.aaronschlossberg.com/assets/img/Backrooms_testing_in_Blender.png",
+                "breadcrumb": {
+                    "@id": "https://www.aaronschlossberg.com/projects/info-sprawlings/blender/#breadcrumbs"
+                },
+                "keywords": [
+                    "Blender",
+                    "3D modeling",
+                    "3D rendering",
+                    "animation",
+                    "computer graphics",
+                    "open-source software"
+                ]
+            },
+            {
+                "@type": "SoftwareApplication",
+                "@id": "https://www.aaronschlossberg.com/projects/info-sprawlings/blender/#software",
+                "name": "Blender",
+                "alternateName": "Blender 3D",
+                "applicationCategory": "MultimediaApplication",
+                "operatingSystem": "Windows, macOS, Linux",
+                "url": "https://www.blender.org/",
+                "license": "https://www.blender.org/about/license/"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://www.aaronschlossberg.com/projects/info-sprawlings/blender/#breadcrumbs",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.aaronschlossberg.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Projects",
+                        "item": "https://www.aaronschlossberg.com/projects/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Info Sprawlings",
+                        "item": "https://www.aaronschlossberg.com/projects/info-sprawlings/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "Blender",
+                        "item": "https://www.aaronschlossberg.com/projects/info-sprawlings/blender/"
+                    }
+                ]
+            },
+            {
+                "@type": "Person",
+                "@id": "https://www.aaronschlossberg.com/#person",
+                "name": "Aaron L. Schlossberg",
+                "url": "https://www.aaronschlossberg.com/about-me/"
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="info-detail-page">
+        <header class="info-detail-hero">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/projects/">Projects</a></li>
+                    <li><a href="/projects/info-sprawlings/">Info Sprawlings</a></li>
+                    <li aria-current="page">Blender</li>
+                </ol>
+            </nav>
+
+            <div class="info-detail-hero-grid">
+                <div class="info-detail-title-block">
+                    <!-- <p class="info-detail-kicker">Info Sprawling · Software</p> -->
+                    <h1>Blender</h1>
+
+                    <p class="info-detail-deck">
+                        A free and open-source 3D creation suite that brings modeling, sculpting, animation, rendering, compositing, visual effects, and more into one extensible application.
+                    </p>
+
+                    <dl class="info-detail-meta">
+                        <div>
+                            <dt>Also known as</dt>
+                            <dd>Blender 3D</dd>
+                        </div>
+
+                        <div>
+                            <dt>Knowledge type</dt>
+                            <dd>Software</dd>
+                        </div>
+
+                        <div>
+                            <dt>Primary topics</dt>
+                            <dd>3D graphics · Digital art · Open source · Animation</dd>
+                        </div>
+
+                        <div>
+                            <dt>Last updated</dt>
+                            <dd>
+                                <time datetime="2026-08-21">August 21, 2026</time>
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <aside class="info-detail-at-a-glance" aria-labelledby="at-a-glance-title">
+                    <div class="info-detail-at-a-glance-content">
+                        <p class="info-section-kicker">At a glance</p>
+                        <h2 id="at-a-glance-title">What connects here?</h2>
+
+                        <ul>
+                            <li><a href="#core-workflows">3D modeling and sculpting</a></li>
+                            <li><a href="#viewport-and-rendering">Rendering and real-time previews</a></li>
+                            <li><a href="#animation-and-effects">Animation and visual effects</a></li>
+                            <li><a href="#extensibility">Python, add-ons, and procedural tools</a></li>
+                            <li><a href="#aarons-universe">Fiction2Reality and <cite>Just This Once</cite></a></li>
+                        </ul>
+                    </div>
+
+                    <figure class="info-detail-logo">
+                        <img
+                            src="/assets/img/blender_logo.png"
+                            alt="Blender logo"
+                            decoding="async">
+
+                        <figcaption>
+                            The Blender logo.
+                        </figcaption>
+                    </figure>
+                </aside>
+            </div>
+        </header>
+
+        <div class="container info-detail-container">
+            <article class="info-detail-article" data-search-body>
+                <section id="what-is-blender" class="info-article-section">
+                    <p class="info-article-lede">
+                        Blender is software for creating and working with two- and three-dimensional digital content. A single Blender project can contain the geometry of objects, their surfaces and textures, lights, cameras, animation, simulations, compositing instructions, and the settings used to turn that scene into still images or video.
+                    </p>
+
+                    <h2>What Blender Is</h2>
+
+                    <p>
+                        Blender is often introduced as a <strong>3D modeling program</strong>, but modeling is only one part of it. It is better understood as an integrated creation suite: an artist can build an object, give it materials, arrange it in a scene, animate it, render it, composite the result, and even edit the resulting video without leaving the application.
+                    </p>
+
+                    <p>
+                        The software is free and open source. Its source code is distributed under the GNU General Public License, while the artwork people create with Blender is not automatically placed under that same license. Blender’s development is coordinated through the <a href="https://www.blender.org/about/foundation/" target="_blank" rel="noopener noreferrer nofollow">Blender Foundation</a> and the broader Blender project.
+                    </p>
+
+                    <figure class="info-feature-figure">
+                        <img
+                            src="/assets/img/Backrooms_testing_in_Blender.png"
+                            alt="A yellow-walled Backrooms scene with pillars and fluorescent ceiling lights being developed in Blender."
+                            width="2868"
+                            height="1590"
+                            loading="eager">
+
+                        <figcaption>
+                            An early Backrooms environment test for <a href="https://www.fiction2reality.com/" target="_blank" rel="noopener noreferrer nofollow">Fiction2Reality</a>, shown inside <a href="/projects/info-sprawlings/blender/">Blender</a>.
+                        </figcaption>
+                    </figure>
+                </section>
+
+                <section id="how-a-scene-fits-together" class="info-article-section">
+                    <h2>How a Blender Scene Fits Together</h2>
+
+                    <p>
+                        A Blender scene is not just one finished picture. It is a structured collection of things that can be viewed, changed, reused, and related to one another.
+                    </p>
+
+                    <div class="info-concept-grid">
+                        <article>
+                            <h3>Objects</h3>
+                            <p>
+                                Scene-level items with a position, rotation, and scale. Meshes, cameras, lights, curves, text, and armatures can all appear as objects.
+                            </p>
+                        </article>
+
+                        <article>
+                            <h3>Data</h3>
+                            <p>
+                                The underlying information an object uses. A mesh object, for example, refers to mesh data made from vertices, edges, and faces.
+                            </p>
+                        </article>
+
+                        <article>
+                            <h3>Materials and textures</h3>
+                            <p>
+                                Instructions and image data that help determine how surfaces react to light and what details appear across them.
+                            </p>
+                        </article>
+
+                        <article>
+                            <h3>Cameras and lights</h3>
+                            <p>
+                                Cameras establish a rendered viewpoint; lights help define visibility, mood, color, shadows, and the form of the scene.
+                            </p>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="core-workflows" class="info-article-section">
+                    <h2>Core Workflows</h2>
+
+                    <p>
+                        People enter Blender through different tasks, but the workflows regularly overlap. A model may begin as simple geometry, be sculpted into a more organic form, receive procedural materials, and then be rigged and animated.
+                    </p>
+
+                    <dl class="info-workflow-list">
+                        <div>
+                            <dt>Modeling</dt>
+                            <dd>
+                                Constructing and editing geometry, from simple hard-surface objects and architecture, to detailed characters and environments.
+                            </dd>
+                        </div>
+
+                        <div>
+                            <dt>Sculpting</dt>
+                            <dd>
+                                Shaping digital forms more like clay, usually with brushes and progressively finer surface detail.
+                            </dd>
+                        </div>
+
+                        <div>
+                            <dt>Materials and shading</dt>
+                            <dd>
+                                Defining the visual behavior of surfaces, often through connected nodes that describe color, roughness, transparency, emission, and other properties.
+                            </dd>
+                        </div>
+
+                        <div>
+                            <dt>UV mapping and texturing</dt>
+                            <dd>
+                                Relating a model’s surface to a two-dimensional layout so images and painted details can be placed predictably.
+                            </dd>
+                        </div>
+                    </dl>
+                </section>
+
+                <section id="viewport-and-rendering" class="info-article-section">
+                    <h2>The Viewport and the Render</h2>
+
+                    <p>
+                        The <strong>3D viewport</strong> is the interactive workspace where a person navigates the scene and changes it. It can show fast solid previews, material previews, wireframes, or rendered shading. A <strong>render</strong> is the calculated output produced from a camera using a render engine and the project’s chosen settings.
+                    </p>
+
+                    <p>
+                        This distinction matters because a scene can feel responsive while it is being edited yet take much longer to render at high quality. Geometry density, lighting, materials, simulations, image resolution, hardware, and render settings can all affect speed and memory use.
+                    </p>
+
+                    <div class="info-comparison-grid">
+                        <article>
+                            <p class="info-comparison-label">Interactive work</p>
+                            <h3>Viewport</h3>
+                            <p>
+                                Optimized for navigating, selecting, editing, testing, and previewing while a project is still in motion.
+                            </p>
+                        </article>
+
+                        <article>
+                            <p class="info-comparison-label">Calculated output</p>
+                            <h3>Render</h3>
+                            <p>
+                                Produces a still or animation frame from the active camera, using an engine such as Eevee or Cycles.
+                            </p>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="animation-and-effects" class="info-article-section">
+                    <h2>Animation, Simulation, and Effects</h2>
+
+                    <p>
+                        Blender can change object properties over time through keyframes, constraints, drivers, armatures, and other animation systems. It also includes tools for simulations and effects involving particles, cloth, rigid bodies, fluids, hair, and procedural motion. The exact technique depends on whether the creator needs direct artistic control, physically inspired behavior, or a mixture of both.
+                    </p>
+
+                    <p>
+                        Grease Pencil adds a drawing-oriented system that can be used for 2D animation, storyboarding, annotations, and hybrid 2D/3D work. Compositing nodes can then combine render layers and make image-level adjustments after the 3D scene has been rendered.
+                    </p>
+                </section>
+
+                <section id="extensibility" class="info-article-section">
+                    <h2>Procedural Tools, Python, and Add-ons</h2>
+
+                    <p>
+                        Blender is extensible. Its Python API can automate repetitive work, generate or modify scenes, build custom tools, and connect Blender to larger production pipelines. Add-ons package extra behavior into reusable extensions, while node-based systems let creators construct visual networks for materials, compositing, and procedural geometry.
+                    </p>
+
+                    <p>
+                        This is one reason Blender is useful to both artists and programmers: the same scene can be shaped manually, procedurally, or through code. The approaches can reinforce one another rather than belonging to separate applications.
+                    </p>
+                </section>
+
+                <section id="strengths-and-learning-curve" class="info-article-section">
+                    <h2>Strengths and Learning Curve</h2>
+
+                    <p>
+                        Blender’s breadth is a major strength: one freely available application covers many stages of digital production and can be customized deeply. That breadth also creates a steep learning curve. A beginner must learn not only buttons and shortcuts, but also the underlying distinctions between objects and data, viewport previews and final renders, materials and textures, local and global coordinates, destructive and non-destructive editing, and many other connected ideas.
+                    </p>
+
+                    <p>
+                        Learning becomes easier when Blender is approached through a small concrete goal— such as modeling one room, lighting one object, or animating one simple motion —while gradually learning the larger system that surrounds it.
+                    </p>
+                </section>
+
+                <section id="aarons-universe" class="info-article-section">
+                    <h2>Blender in Aaron Schlossberg’s Universe</h2>
+
+                    <p>
+                        Blender is used in developing 3D environments for my project, <a href="https://www.fiction2reality.com/" target="_blank" rel="noopener noreferrer nofollow">Fiction2Reality</a>, including Backrooms-related spaces. Blender also appears inside my short story <a href="/writings/just-this-once/"><cite>Just This Once</cite></a>, where a student is seen building a meticulously modeled old house in the school’s tech room.
+                    </p>
+
+                    <p>
+                        That reference is a small example of the connection the <a href="/projects/info-sprawlings/">Info Sprawlings</a> is meant to preserve: a real creative tool can have its own explanatory knowledge page while also linking outward to the fictional (or expostory) writing, projects, and ideas in which it appears.
+                    </p>
+                </section>
+
+                <section
+                    id="sources-and-further-reading"
+                    class="info-article-section info-sources-section"
+                    data-search-exclude>
+
+                    <h2>Sources and Further Reading</h2>
+
+                    <ul>
+                        <li>
+                            <a href="https://www.blender.org/about/" target="_blank" rel="noopener noreferrer">About Blender</a>: Blender’s official overview and mission.
+                        </li>
+
+                        <li>
+                            <a href="https://www.blender.org/about/license/" target="_blank" rel="noopener noreferrer">Blender License</a>: official explanation of Blender’s GPL licensing and created artwork.
+                        </li>
+
+                        <li>
+                            <a href="https://docs.blender.org/manual/en/latest/" target="_blank" rel="noopener noreferrer">Blender Manual</a>: the official reference for Blender’s interface and tools.
+                        </li>
+
+                        <li>
+                            <a href="https://www.blender.org/about/history/" target="_blank" rel="noopener noreferrer">Blender History</a>: an official history of the project and its open productions.
+                        </li>
+                    </ul>
+                </section>
+            </article>
+
+            <aside class="info-connections" aria-labelledby="connections-title">
+                <div class="info-section-heading">
+                    <p class="info-section-kicker">Knowledge connections</p>
+                    <h2 id="connections-title">Explore From Here</h2>
+
+                    <p>
+                        These are related concepts, projects, and authored works.
+                    </p>
+                </div>
+
+                <div class="info-connections-grid">
+                    <section aria-labelledby="related-terms-title">
+                        <h3 id="related-terms-title">Related Terms</h3>
+
+                        <div class="info-term-list">
+                            <span>3D Modeling</span>
+                            <span>3D Rendering</span>
+                            <span>Computer Graphics</span>
+                            <span>Mesh</span>
+                            <span>Material</span>
+                            <span>Texture</span>
+                            <span>Animation</span>
+                            <span>Visual Effects</span>
+                            <span>Python Scripting</span>
+                        </div>
+                    </section>
+
+                    <section aria-labelledby="related-project-title">
+                        <h3 id="related-project-title">Related Project</h3>
+
+                        <a
+                            class="info-connection-card"
+                            href="https://www.fiction2reality.com/"
+                            target="_blank"
+                            rel="noopener noreferrer nofollow">
+
+                            <span>Project</span>
+                            <strong>Fiction2Reality</strong>
+                            <span class="info-connection-description">
+                                Blender is used to develop digital 3D environments.
+                            </span>
+                        </a>
+                    </section>
+
+                    <section aria-labelledby="related-writing-title">
+                        <h3 id="related-writing-title">Related Writing</h3>
+
+                        <a
+                            class="info-connection-card"
+                            href="/writings/just-this-once/">
+
+                            <span>Fiction · Short Story</span>
+                            <strong><cite>Just This Once</cite></strong>
+                            <span class="info-connection-description">
+                                A student’s 3D modeling work in Blender appears within the story.
+                            </span>
+                        </a>
+                    </section>
+                </div>
+
+                <a
+                    class="info-button info-button-primary info-back-to-collection"
+                    href="/projects/info-sprawlings/">
+                    Browse All Info Sprawlings
+                </a>
+            </aside>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+</body>
+</html>

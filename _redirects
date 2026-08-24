@@ -9,5 +9,10 @@
 /projects/fencing-video.html             /projects/fencing-video/ 301
 /projects/f2r.html                       /projects/f2r/ 301
 
+# Info Sprawlings moved under Projects
+/info-sprawlings                         /projects/info-sprawlings/ 301
+/info-sprawlings/                        /projects/info-sprawlings/ 301
+/info-sprawlings/*                       /projects/info-sprawlings/:splat 301
+
 # --- Netlify subdomain → canonical domain
 https://aaron-schlossberg-portfolio.netlify.app/*  https://www.aaronschlossberg.com/:splat 301!

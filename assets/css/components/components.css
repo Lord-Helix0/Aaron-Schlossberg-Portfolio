@@ -126,20 +126,6 @@
     font-weight: 600;
 }
 
-
-/* Fiction2Reality embed */
-.f2r-embed {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-}
-
-.f2r-embed iframe {
-    width: 100%;
-    height: 80vh;
-    border: 0;
-    border-radius: 16px;
-}
-
 html,
 body {
     width: 100%;
@@ -166,7 +152,11 @@ body.iframe-page iframe {
     margin-top: 2rem;
     padding: 0.85rem 1.75rem;
     border-radius: 999px;
-    background: linear-gradient(135deg, #5a4668, #4a3858);
+    background: linear-gradient(
+        135deg,
+        var(--accent),
+        var(--accent-dark)
+    );
     color: #ffffff;
     font-family: inherit;
     font-size: 1.1rem;
@@ -183,7 +173,11 @@ body.iframe-page iframe {
 
 .cta-button:hover,
 .cta-button:focus-visible {
-    background: linear-gradient(135deg, #6b5480, #5a4668);
+    background: linear-gradient(
+        135deg,
+        var(--accent-light),
+        var(--accent)
+    );
     box-shadow:
         0 12px 28px rgba(0, 0, 0, 0.35),
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
@@ -231,18 +225,33 @@ body.iframe-page iframe {
     display: inline-block;
     padding: 14px 28px;
     border-radius: 999px;
-    background: #6b547a;
-    color: white;
+    background: linear-gradient(
+        135deg,
+        var(--accent),
+        var(--accent-dark)
+    );
+    color: #ffffff;
     font-size: 1.1rem;
     font-weight: 600;
     text-decoration: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: all 0.2s ease;
+    box-shadow:
+        0 8px 22px var(--accent-glow),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
 }
 
 .resume-button:hover {
-    background: #5b4768;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(
+        135deg,
+        var(--accent-light),
+        var(--accent)
+    );
+    box-shadow:
+        0 12px 28px var(--accent-glow),
+        inset 0 1px 0 rgba(255, 255, 255, 0.22);
     transform: translateY(-2px);
 }
 
@@ -323,7 +332,7 @@ body.iframe-page iframe {
 
 .experience-card h3 {
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
 }
 
 .experience-card p {
@@ -339,13 +348,9 @@ body.iframe-page iframe {
     margin-bottom: 14px;
 }
 
-.experience-card h3 {
-    margin-bottom: 6px;
-}
-
 .experience-role {
     margin: 0;
-    color: #5f4b6f;
+    color: var(--accent-dark);
     font-weight: 600;
 }
 
@@ -354,45 +359,24 @@ body.iframe-page iframe {
     flex-shrink: 0;
     padding: 9px 16px;
     border-radius: 999px;
-    background: #6b547a;
-    color: white;
-    font-size: 0.95rem;
-    font-weight: 700;
-    text-decoration: none;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
-}
-
-.experience-link:hover {
-    background: #5b4768;
-    transform: translateY(-2px);
-}
-
-@media (max-width: 700px) {
-    .experience-card-header {
-        flex-direction: column;
-    }
-}
-
-
-/* Shared cranberry button theme */
-.cta-button,
-.resume-button,
-.experience-link {
-    border-radius: 999px;
     background: linear-gradient(
         135deg,
         var(--accent),
         var(--accent-dark)
     );
     color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
     box-shadow:
         0 8px 22px var(--accent-glow),
         inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
 }
 
-.cta-button:hover,
-.cta-button:focus-visible,
-.resume-button:hover,
 .experience-link:hover {
     background: linear-gradient(
         135deg,
@@ -405,89 +389,11 @@ body.iframe-page iframe {
     transform: translateY(-2px);
 }
 
-.experience-role {
-    color: var(--accent-dark);
+@media (max-width: 700px) {
+    .experience-card-header {
+        flex-direction: column;
+    }
 }
-
-.timeline::before,
-.education-timeline::before {
-    background: linear-gradient(
-        to bottom,
-        var(--accent-dark),
-        var(--accent),
-        var(--accent-light)
-    );
-}
-
-
-/* Cranberry accent overrides */
-:root {
-    --accent: #8a2f3f;
-    --accent-dark: #5f1f2c;
-    --accent-light: #b85a68;
-    --accent-glow: rgba(138, 47, 63, 0.28);
-}
-
-.cta-button,
-.resume-button,
-.card-link,
-.experience-link {
-    border-radius: 999px;
-    background: linear-gradient(
-        135deg,
-        var(--accent),
-        var(--accent-dark)
-    ) !important;
-    color: #ffffff !important;
-    box-shadow: 0 8px 22px var(--accent-glow);
-}
-
-.cta-button:hover,
-.resume-button:hover,
-.card-link:hover,
-.experience-link:hover {
-    background: linear-gradient(
-        135deg,
-        var(--accent-light),
-        var(--accent)
-    ) !important;
-    box-shadow: 0 12px 28px var(--accent-glow);
-    transform: translateY(-2px);
-}
-
-.education-card-content .card-link {
-    display: table;
-    margin: 0 auto;
-}
-
-.timeline::before {
-    background: linear-gradient(
-        to bottom,
-        var(--accent-dark),
-        var(--accent),
-        var(--accent-light)
-    ) !important;
-}
-
-.timeline-item::before {
-    border-color: var(--accent-dark) !important;
-    box-shadow: 0 0 0 6px rgba(138, 47, 63, 0.12) !important;
-}
-
-.timeline-year,
-.experience-role {
-    color: var(--accent-dark) !important;
-}
-
-.quick-links a {
-    border: 1px solid rgba(138, 47, 63, 0.14);
-}
-
-.quick-links a:hover {
-    color: var(--accent-dark) !important;
-    box-shadow: 0 10px 26px var(--accent-glow);
-}
-
 
 /* Centered buttons in content sections */
 .container .cta-button,

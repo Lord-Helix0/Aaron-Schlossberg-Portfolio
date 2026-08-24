@@ -146,32 +146,6 @@
     text-decoration: underline;
 }
 
-.sitemap-list {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 260px));
-    justify-content: center;
-    gap: 0.85rem 2rem;
-    width: 100%;
-    max-width: 900px;
-    margin: 1rem auto 0;
-    padding: 0;
-    list-style: none;
-}
-
-.sitemap-list li {
-    position: relative;
-    padding-left: 1.1rem;
-    line-height: 1.5;
-    text-align: left;
-}
-
-.sitemap-list li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: var(--accent-dark);
-}
-
 /* All-pages list. */
 .all-pages-list {
     display: block;

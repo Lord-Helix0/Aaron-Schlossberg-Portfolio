@@ -3,6 +3,18 @@
    ========================================================== */
 
 /*
+   Visual text sizing only. These classes do not give the text
+   any semantic meaning, so they can be used on any element.
+*/
+.text-small {
+    font-size: var(--text-size-small);
+}
+
+.text-extra-small {
+    font-size: var(--text-size-extra-small);
+}
+
+/*
    A reusable flex row for card groups.
 
    Cards wrap onto additional rows as needed. When the final row

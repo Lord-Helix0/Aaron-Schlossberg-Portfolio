@@ -2,7 +2,8 @@
     "name": "aaron-schlossbergs-universe",
     "private": true,
     "scripts": {
-        "build": "node scripts/build-site.mjs"
+        "validate": "node scripts/validate-site.mjs",
+        "build": "node scripts/validate-site.mjs && node scripts/build-site.mjs"
     },
     "devDependencies": {
         "cheerio": "1.2.0"

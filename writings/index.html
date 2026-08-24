@@ -44,7 +44,7 @@
 
     <link rel="stylesheet" href="/assets/css/main.css">
     <script defer src="/assets/js/main.js"></script>
-    <script defer src="/assets/js/pages/writings-search.js"></script>
+    <script defer src="/assets/js/search-engine.js"></script>
     <script defer src="/assets/js/pages/writings.js"></script>
 
     <!-- Page and breadcrumb structured data -->
@@ -210,9 +210,9 @@
                                 Clear search
                             </button>
                         </div>
-                        <p class="writings-search-help italic-text">
-                            <small>Tips: Put quotation marks around an exact phrase. | Close spelling mistakes may still work.</small>
-                        </p>
+                        <!-- <p class="writings-search-help italic-text text-small">
+                            Tip: Put quotation marks around an exact phrase.
+                        </p> -->
 
                         <p
                             class="writings-search-status"
@@ -296,7 +296,7 @@
                 </div>
 
                 <div class="writings-results-bar">
-                    <p data-writing-results-count aria-live="polite">2 pieces shown</p>
+                    <p data-writing-results-count aria-live="polite">3 pieces shown</p>
                     <button type="button" class="writings-reset-filters" data-reset-writing-filters>
                         Reset search and filters
                     </button>
@@ -308,17 +308,21 @@
                         data-writing-card
                         data-writing-types="fiction"
                         data-search-terms="short story creative writing muhlenberg college muses publication technology identity">
-                        <div class="writings-piece-tags" aria-label="Writing types">
-                            <span><small>Fiction</small></span>
-                            <span><small>Short Story</small></span>
-                            <span><small>Speculative Horror</small></span>
-                        </div>
+                        
                         <h3>1080 Paths of Least Resistance</h3>
                         <p class="writings-piece-summary">
-                            Sal and 1080 enter the Complex.<br><small>A product of my creative writing work at <a href="/education/muhlenberg/">Muhlenberg College</a>. Accepted by <cite>MUSES</cite>.</small>
+                            Sal and 1080 enter the Complex.<br><span class="text-small">A product of my creative writing work at <a href="/education/muhlenberg/">Muhlenberg College</a>. Accepted by <cite>MUSES</cite>.</span>
                         </p>
+                        <br>
+
+                        <div class="writings-piece-tags" aria-label="Writing types">
+                            <span>#Fiction</span>
+                            <span>#ShortStory</span>
+                            <span>#SpeculativeHorror</span>
+                        </div>
+
                         <dl class="writings-piece-meta">
-                            <div><dt>Context</dt><dd>Muhlenberg College</dd></div>
+                            <div><dt>Context</dt><dd><a href="/education/muhlenberg/">Muhlenberg College</a></dd></div>
                             <div><dt>Status</dt><dd>Accepted for publication</dd></div>
                         </dl>
                         <a class="writings-piece-action writings-button writings-button-primary" href="/writings/1080-paths-of-least-resistance/" aria-label="Read 1080 Paths of Least Resistance">Read this piece</a>
@@ -326,22 +330,24 @@
 
                     <article
                         class="writings-piece-card" data-writing-card data-writing-types="fiction" data-search-terms="short story creative writing muhlenberg college muses publication speculative horror envy desire morality supernatural abilities">
-                        <div class="writings-piece-tags">
-                            <span><small>Fiction</small></span>
-                            <span><small>Short Story</small></span>
-                            <span><small>Speculative Horror</small></span>
-                        </div>
 
                         <h3>Just This Once</h3>
 
                         <p class="writings-piece-summary">
-                            Speculative horror about envy and temptation.<br><small>A product of my creative writing work at <a href="/education/muhlenberg/">Muhlenberg College</a>. Accepted by <cite>MUSES</cite>.</small>
+                            Speculative horror about envy and temptation.<br><span class="text-small">A product of my creative writing work at <a href="/education/muhlenberg/">Muhlenberg College</a>. Accepted by <cite>MUSES</cite>.</span>
                         </p>
+                        <br>
+
+                        <div class="writings-piece-tags" aria-label="Writing types">
+                            <span>#Fiction</span>
+                            <span>#ShortStory</span>
+                            <span>#SpeculativeHorror</span>
+                        </div>
 
                         <dl class="writings-piece-meta">
                             <div>
                                 <dt>Context</dt>
-                                <dd>Muhlenberg College</dd>
+                                <dd><a href="/education/muhlenberg/">Muhlenberg College</a></dd>
                             </div>
                             <div>
                                 <dt>Status</dt>
@@ -352,6 +358,45 @@
                         <a class="writings-piece-action writings-button writings-button-primary" href="/writings/just-this-once/" aria-label="Read Just This Once">Read this piece</a>
                     </article>
 
+                    <article
+                        class="writings-piece-card"
+                        data-writing-card
+                        data-writing-types="technical essay"
+                        data-search-terms="Blender Blender 3D 3D modeling software computer graphics CGI animation rendering open source Python technical writing explanatory nonfiction Info Sprawlings">
+
+                        <h3>Blender</h3>
+
+                        <p class="writings-piece-summary">
+                            An explanation of the software Blender.<br><span class="text-small">A product of my <a href="/projects/info-sprawlings/" target="_blank" rel="noopener noreferrer nofollow">Info Sprawlings</a> project; one connected sprawl.</span>
+                        </p>
+                        <br>
+
+                        <div class="writings-piece-tags" aria-label="Writing types">
+                            <span>#InfoSprawlings</span>
+                            <span>#Expository</span>
+                            <span>#Technical</span>
+                        </div>
+
+                        <dl class="writings-piece-meta">
+                            <div>
+                                <dt>Context</dt>
+                                <dd><a href="/projects/info-sprawlings/" target="_blank" rel="noopener noreferrer nofollow">Info Sprawlings</a></dd>
+                            </div>
+
+                            <div>
+                                <dt>Status</dt>
+                                <dd>Living article</dd>
+                            </div>
+                        </dl>
+
+                        <a
+                            class="writings-piece-action writings-button writings-button-primary"
+                            href="/projects/info-sprawlings/blender/"
+                            aria-label="Read the Blender Info Sprawlings article">
+                            Read this piece
+                        </a>
+                    </article>
+
                     <!-- "The Equation of Quiet" fiction story -->
                     <!-- <article
                         class="writings-piece-card"
@@ -359,7 +404,7 @@
                         data-writing-types="fiction"
                         data-search-terms="creative writing short fiction muhlenberg college">
                         <div class="writings-piece-tags" aria-label="Writing types">
-                            <span>Fiction</span>
+                            <span>#example</span>
                         </div>
                         <h3>The Equation of Quiet</h3>
                         <p class="writings-piece-summary">
@@ -379,8 +424,7 @@
                         data-writing-types="script fiction"
                         data-search-terms="fiction2reality f2r backrooms liminal spaces short video screenplay treatment production">
                         <div class="writings-piece-tags" aria-label="Writing types">
-                            <span>Script</span>
-                            <span>Fiction</span>
+                            <span>#example</span>
                         </div>
                         <h3>We Have Everything (Fiction2Reality)</h3>
                         <p class="writings-piece-summary">
@@ -400,8 +444,7 @@
                         data-writing-types="essay"
                         data-search-terms="itsukushima miyajima japan pilgrimage religion tourism research annotated bibliography muhlenberg">
                         <div class="writings-piece-tags" aria-label="Writing types">
-                            <span>Essay &amp; Nonfiction</span>
-                            <span>Research</span>
+                            <span>#example</span>
                         </div>
                         <h3>Itsukushima Pilgrimage Research</h3>
                         <p class="writings-piece-summary">
@@ -421,8 +464,7 @@
                         data-writing-types="copywriting"
                         data-search-terms="muhlenberg college english literatures creative writing social media instagram facebook internship captions interviews events">
                         <div class="writings-piece-tags" aria-label="Writing types">
-                            <span>Copywriting &amp; Content</span>
-                            <span>Social Media</span>
+                            <span>#example</span>
                         </div>
                         <h3>Muhlenberg English Social Content</h3>
                         <p class="writings-piece-summary">
@@ -442,8 +484,7 @@
                         data-writing-types="copywriting fiction"
                         data-search-terms="fiction2reality f2r website brand copy worldbuilding backrooms immersive project production narrative">
                         <div class="writings-piece-tags" aria-label="Writing types">
-                            <span>Copywriting &amp; Content</span>
-                            <span>Narrative &amp; Worldbuilding</span>
+                            <span>#example</span>
                         </div>
                         <h3>Fiction2Reality Website &amp; Brand Writing</h3>
                         <p class="writings-piece-summary">
@@ -463,8 +504,7 @@
                         data-writing-types="technical copywriting"
                         data-search-terms="keepup bookkeeping react typescript capstone software help documentation interface product explanation">
                         <div class="writings-piece-tags" aria-label="Writing types">
-                            <span>Technical</span>
-                            <span>Product Writing</span>
+                            <span>#example</span>
                         </div>
                         <h3>KeepUp Help &amp; Project Writing</h3>
                         <p class="writings-piece-summary">
@@ -484,8 +524,7 @@
                         data-writing-types="copywriting technical essay"
                         data-search-terms="mayvene question answer platform entrepreneurship product vision website copy pitch explanation knowledge community">
                         <div class="writings-piece-tags" aria-label="Writing types">
-                            <span>Product Writing</span>
-                            <span>Explanatory</span>
+                            <span>#example</span>
                         </div>
                         <h3>Mayvene Product Vision &amp; Copy</h3>
                         <p class="writings-piece-summary">

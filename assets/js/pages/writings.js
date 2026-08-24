@@ -10,7 +10,7 @@
         );
 
         const searchEngine =
-            window.WritingsSearch;
+            window.SiteSearch;
 
         if (!catalog || !searchEngine) return;
 
@@ -132,10 +132,13 @@
 
         let searchIndexLoaded = false;
         let searchConfig = {};
+        let searchFieldDefinitions;
 
         let preparedPieces = cards
             .map(pieceFromCard)
-            .map(searchEngine.preparePiece);
+            .map((piece) =>
+                searchEngine.preparePiece(piece)
+            );
 
         searchInput.value =
             initialParams.get("q") || "";
@@ -539,7 +542,8 @@
             label.textContent =
                 searchEngine
                     .describeMatchedFields(
-                        result.matchedFields
+                        result.matchedFields,
+                        searchFieldDefinitions
                     );
 
             if (excerpt) {
@@ -877,16 +881,39 @@
                     );
                 }
 
+                const indexedPiecesById =
+                    new Map(
+                        preparedIndex.pieces
+                            .filter((piece) =>
+                                cardById.has(
+                                    piece.id
+                                )
+                            )
+                            .map((piece) => [
+                                piece.id,
+                                piece
+                            ])
+                    );
+
                 preparedPieces =
-                    preparedIndex.pieces
-                        .filter((piece) =>
-                            cardById.has(
-                                piece.id
+                    cards.map((card) => {
+                        const id = cardId(card);
+
+                        return (
+                            indexedPiecesById.get(id) ||
+                            searchEngine.preparePiece(
+                                pieceFromCard(card),
+                                preparedIndex
+                                    .fieldDefinitions
                             )
                         );
+                    });
 
                 searchConfig =
                     preparedIndex.config;
+                
+                searchFieldDefinitions =
+                    preparedIndex.fieldDefinitions;
 
                 populateAdditionalFilters();
 
@@ -928,9 +955,21 @@
             renderCatalog();
         }
 
+        let searchInputTimer;
+
         searchInput.addEventListener(
             "input",
-            renderCatalog
+            () => {
+                window.clearTimeout(
+                    searchInputTimer
+                );
+
+                searchInputTimer =
+                    window.setTimeout(
+                        renderCatalog,
+                        120
+                    );
+            }
         );
 
         clearSearchButton.addEventListener(

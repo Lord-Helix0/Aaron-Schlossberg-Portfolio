@@ -1,0 +1,10 @@
+{
+    "minimumTypoLength": 4,
+    "synonymGroups": [
+        ["3d", "three dimensional", "three-dimensional"],
+        ["3d modeling", "3d modelling"],
+        ["computer graphics", "cg"],
+        ["visual effects", "vfx"],
+        ["open source", "open-source"]
+    ]
+}

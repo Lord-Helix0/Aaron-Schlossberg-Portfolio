@@ -1,0 +1,95 @@
+{
+    "schemaVersion": 1,
+    "id": "software--blender",
+    "slug": "blender",
+    "url": "/projects/info-sprawlings/blender/",
+    "title": "Blender",
+    "entityType": "Software",
+    "primarySection": "info-sprawlings",
+    "collections": [
+        "info-sprawlings",
+        "writings"
+    ],
+    "writingTypes": [
+        "technical",
+        "essay"
+    ],
+    "aliases": [
+        "Blender 3D"
+    ],
+    "summary": "A free and open-source 3D creation suite used for modeling, sculpting, animation, rendering, compositing, visual effects, and other digital-production work.",
+    "topics": [
+        {
+            "id": "topic--3d-computer-graphics",
+            "name": "3D Computer Graphics"
+        },
+        {
+            "id": "topic--digital-art",
+            "name": "Digital Art"
+        },
+        {
+            "id": "topic--animation",
+            "name": "Animation"
+        },
+        {
+            "id": "topic--open-source-software",
+            "name": "Open-Source Software"
+        }
+    ],
+    "relatedTerms": [
+        "3D modeling",
+        "3D rendering",
+        "computer-generated imagery",
+        "CGI",
+        "mesh",
+        "material",
+        "texture",
+        "animation",
+        "visual effects",
+        "Python scripting",
+        "UV mapping",
+        "Cycles",
+        "Eevee"
+    ],
+    "relationships": [
+        {
+            "predicate": "used-for",
+            "objectId": "concept--3d-modeling",
+            "label": "3D modeling"
+        },
+        {
+            "predicate": "used-for",
+            "objectId": "concept--animation",
+            "label": "Animation"
+        },
+        {
+            "predicate": "used-for",
+            "objectId": "concept--3d-rendering",
+            "label": "3D rendering"
+        },
+        {
+            "predicate": "used-by",
+            "objectId": "project--fiction2reality",
+            "label": "Fiction2Reality",
+            "url": "https://www.fiction2reality.com/"
+        }
+    ],
+    "relatedWriting": [
+        {
+            "id": "writing--just-this-once",
+            "title": "Just This Once",
+            "url": "/writings/just-this-once/",
+            "relationship": "Blender is mentioned within the story."
+        }
+    ],
+    "searchTerms": [
+        "3D software",
+        "3D creation suite",
+        "Cycles",
+        "Eevee",
+        "Grease Pencil",
+        "Blender Foundation"
+    ],
+    "dateCreated": "2026-08-21",
+    "dateModified": "2026-08-21"
+}

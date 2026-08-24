@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-    const FIELD_DEFINITIONS = [
+    const DEFAULT_FIELD_DEFINITIONS = [
         { key: "title", label: "title", weight: 120 },
         { key: "tags", label: "types and tags", weight: 55 },
         { key: "keywords", label: "keywords and aliases", weight: 50 },
@@ -118,8 +118,23 @@
             .join(" ");
     }
 
-    function preparePiece(piece) {
-        const rawFields = {
+    function searchableText(value) {
+        if (Array.isArray(value)) {
+            return value.map(searchableText).join(" ");
+        }
+
+        if (value && typeof value === "object") {
+            return metadataText(value);
+        }
+
+        return String(value || "");
+    }
+
+    function preparePiece(
+        piece,
+        fieldDefinitions = DEFAULT_FIELD_DEFINITIONS
+    ) {
+        const legacyWritingFields = {
             title: piece.title || "",
             tags: [
                 ...(piece.types || []),
@@ -139,10 +154,15 @@
             body: piece.body || ""
         };
 
-        const fields = FIELD_DEFINITIONS.map(
+        const rawFields =
+            piece.searchFields ||
+            legacyWritingFields;
+
+        const fields = fieldDefinitions.map(
             (definition) => {
-                const text =
-                    rawFields[definition.key];
+                const text = searchableText(
+                    rawFields[definition.key]
+                );
 
                 const normalized =
                     normalize(text);
@@ -166,17 +186,32 @@
     }
 
     function prepareIndex(index) {
+        const fieldDefinitions =
+            Array.isArray(index.fieldDefinitions) &&
+            index.fieldDefinitions.length
+                ? index.fieldDefinitions
+                : DEFAULT_FIELD_DEFINITIONS;
+
+        const prepare = (piece) =>
+            preparePiece(
+                piece,
+                fieldDefinitions
+            );
+
         return {
             ...index,
             config: index.config || {},
+            fieldDefinitions,
             pieces: (index.pieces || [])
-                .map(preparePiece)
+                .map(prepare),
+            items: (index.items || [])
+                .map(prepare)
         };
     }
 
     function typoThreshold(length) {
-        if (length <= 5) return 1;
-        if (length <= 12) return 2;
+        if (length <= 8) return 1;
+        if (length <= 14) return 2;
         return 3;
     }
 
@@ -864,10 +899,11 @@
     }
 
     function describeMatchedFields(
-        fieldKeys
+        fieldKeys,
+        fieldDefinitions = DEFAULT_FIELD_DEFINITIONS
     ) {
         const labels = unique(
-            FIELD_DEFINITIONS
+            fieldDefinitions
                 .filter((definition) =>
                     fieldKeys.includes(
                         definition.key
@@ -903,7 +939,7 @@
         );
     }
 
-    window.WritingsSearch = {
+    window.SiteSearch = {
         buildExcerpt,
         describeMatchedFields,
         normalize,

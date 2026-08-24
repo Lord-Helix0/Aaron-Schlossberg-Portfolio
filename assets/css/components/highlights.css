@@ -1,13 +1,5 @@
 /* Highlights and Horizontal Carousel | Reusable for highlights */
 
-/* Grid layout for highlight cards *outside* a carousel */
-.highlights-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
-    justify-content: center;
-    gap: 20px;
-}
-
 /* Individual highlight card */
 .highlight-card {
     display: flex;

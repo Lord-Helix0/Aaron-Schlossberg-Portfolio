@@ -108,34 +108,8 @@ p + ul {
     margin-top: 0;
 }
 
-section #contact {
-    text-align: center;
-}
-
-#contact {
-    margin-top: 20px;
-    text-align: center;
-}
-
-#contact h2 {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-#contact .social-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
 #projects {
     text-align: center;
-}
-
-#projects p {
-    margin-bottom: 0;
-    padding-bottom: 0;
 }
 
 #projects ul {
@@ -150,26 +124,18 @@ section #contact {
     margin-bottom: 7px;
 }
 
-.contact-icon {
-    width: 40px;
-    height: 40px;
-    margin: 10px;
-    cursor: pointer;
-    object-fit: contain;
-    transition: transform 0.2s ease-in-out;
-}
-
-.contact-icon:hover {
-    transform: scale(1.1);
-}
-
 button {
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
     padding: 0;
     border: none;
+    outline: none;
     background: none;
     cursor: pointer;
-    font-family: 'DM Sans', sans-serif;
+    font-family: "DM Sans", sans-serif;
+    text-decoration: none;
 }
 
 a {
@@ -189,8 +155,7 @@ a {
 }
 
 /* Shared link and button reset */
-a,
-button {
+a {
     margin: 0;
     padding: 0;
     border: none;
@@ -203,12 +168,6 @@ a {
     display: inline;
     white-space: normal;
     overflow-wrap: anywhere;
-}
-
-button {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
 }
 
 header a {
@@ -252,18 +211,6 @@ blockquote {
 #clubs ul {
     margin-top: 0;
     padding-top: 0;
-}
-
-#projects p:last-of-type,
-#clubs p:last-of-type {
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-#projects p:nth-last-of-type(2),
-#clubs p:nth-last-of-type(2) {
-    margin-bottom: 0;
-    padding-bottom: 0;
 }
 
 #projects p:last-of-type,

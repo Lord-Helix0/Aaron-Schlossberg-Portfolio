@@ -12,11 +12,13 @@
 
 /* Page-specific styling */
 @import url("pages/about-me.css");
+@import url("pages/contact.css");
 @import url("pages/education.css");
 @import url("pages/images.css");
 @import url("pages/site-map.css");
 @import url("pages/writings.css");
 @import url("pages/writing-piece.css");
+@import url("pages/info-sprawlings.css");
 
 /* Reusable helper classes */
 @import url("core/utilities.css");

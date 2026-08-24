@@ -2,4 +2,6 @@
 node_modules/
 _site/
 /assets/data/writings-search-index.json
+/assets/data/info-sprawlings-search-index.json
+/assets/data/site-search-index.json
 /test/

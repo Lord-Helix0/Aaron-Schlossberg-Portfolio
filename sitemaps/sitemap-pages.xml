@@ -91,8 +91,28 @@
     </url> -->
     <url>
           <loc>https://www.aaronschlossberg.com/projects/</loc>
-          <lastmod>2026-08-02</lastmod>
+          <lastmod>2026-08-21</lastmod>
     </url>
+    <url>
+        <loc>https://www.aaronschlossberg.com/projects/info-sprawlings/</loc>
+        <lastmod>2026-08-22</lastmod>
+    </url>
+    <url>
+        <loc>https://www.aaronschlossberg.com/projects/info-sprawlings/history/</loc>
+        <lastmod>2026-08-22</lastmod>
+    </url>
+    <url>
+        <loc>https://www.aaronschlossberg.com/projects/info-sprawlings/blender/</loc>
+        <lastmod>2026-08-21</lastmod>
+    </url>
+    <!-- <url>
+        <loc>https://www.aaronschlossberg.com/projects/mayvene/</loc>
+        <lastmod>2026-08-21</lastmod>
+    </url> -->
+    <!-- <url>
+        <loc>https://www.aaronschlossberg.com/projects/fiction2reality/</loc>
+        <lastmod>2026-08-21</lastmod>
+    </url> -->
     <url>
           <loc>https://www.aaronschlossberg.com/projects/f2r/</loc>
           <lastmod>2026-08-02</lastmod>
@@ -115,7 +135,7 @@
     </url>
     <url>
           <loc>https://www.aaronschlossberg.com/contact/</loc>
-          <lastmod>2026-08-02</lastmod>
+          <lastmod>2026-08-24</lastmod>
     </url>
     <url>
           <loc>https://www.aaronschlossberg.com/images/</loc>
@@ -147,6 +167,6 @@
     </url> -->
     <url>
           <loc>https://www.aaronschlossberg.com/site-map/</loc>
-          <lastmod>2026-08-02</lastmod>
+          <lastmod>2026-08-22</lastmod>
     </url>
 </urlset>
