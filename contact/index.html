@@ -265,62 +265,86 @@
                         <h3 id="contact-form-title">Send Me a Message</h3>
 
                         <p class="contact-form__intro">
-                            Fields marked as required must be completed before submitting the form.
+                            An asterisk (<span class="contact-required-marker" aria-hidden="true">*</span>) identifies each required field.
                         </p>
 
                         <div class="contact-form__row">
                             <div class="contact-form__field">
-                                <label for="contact-name">Name</label>
+                                <label for="contact-name">Name<span class="contact-required-marker" aria-hidden="true">*</span>
+                                </label>
                                 <input id="contact-name" name="name" type="text" autocomplete="name" maxlength="100" required>
                             </div>
 
                             <div class="contact-form__field">
-                                <label for="contact-email">Email address</label>
+                                <label for="contact-email">Email address<span class="contact-required-marker" aria-hidden="true">*</span></label>
                                 <input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required>
                             </div>
                         </div>
 
                         <div class="contact-form__field">
-                            <label for="contact-topic">
-                                What are you reaching out about?
-                            </label>
+                            <label for="contact-topic">What are you reaching out about?<span class="contact-required-marker" aria-hidden="true">*</span></label>
 
                             <select id="contact-topic" name="topic" required>
                                 <option value="" selected disabled>
                                     Select a topic
                                 </option>
-                                <option value="professional-opportunity">
+
+                                <option value="Job or professional opportunity">
                                     Job or professional opportunity
                                 </option>
-                                <option value="project-collaboration">
+
+                                <option value="Project collaboration">
                                     Project collaboration
                                 </option>
-                                <option value="writing-or-media">
+
+                                <option value="Writing or media">
                                     Writing or media
                                 </option>
-                                <option value="fiction2reality-or-backrooms">
+
+                                <option value="Fiction2Reality">
                                     Fiction2Reality
                                 </option>
-                                <option value="website-feedback">
+
+                                <option value="Website feedback">
                                     Website feedback
                                 </option>
-                                <option value="general-message">
+
+                                <option value="General message">
                                     General message
                                 </option>
-                                <option value="other">
+
+                                <option value="Other">
                                     Other
                                 </option>
                             </select>
                         </div>
 
                         <div class="contact-form__field">
-                            <label for="contact-subject">Subject</label>
+                            <label for="contact-subject">Subject<span class="contact-required-marker" aria-hidden="true">*</span></label>
                             <input id="contact-subject" name="subject" type="text" maxlength="150" required>
                         </div>
 
                         <div class="contact-form__field">
-                            <label for="contact-message">Message</label>
-                            <textarea id="contact-message" name="message" rows="8" minlength="20" maxlength="7500" required></textarea>
+                            <label for="contact-message">
+                                Message<span class="contact-required-marker" aria-hidden="true">*</span>
+                            </label>
+
+                            <textarea
+                                id="contact-message"
+                                name="message"
+                                rows="8"
+                                minlength="20"
+                                maxlength="7500"
+                                aria-describedby="contact-message-help"
+                                required
+                            ></textarea>
+
+                            <small
+                                id="contact-message-help"
+                                class="contact-form__help"
+                            >
+                                Please enter at least 20 characters. Maximum: 7,500.
+                            </small>
                         </div>
 
                         <p id="contact-privacy-note" class="contact-form__privacy italic-text">
@@ -476,7 +500,7 @@
                             <span class="profile-card__content">
                                 <strong>Instagram</strong>
                                 <span>Main personal account</span>
-                                <small>@aaron_schlossberg</small>
+                                <small>@<span class="italic-text">aaron_schlossberg</span></small>
                             </span>
 
                             <span class="profile-card__arrow" aria-hidden="true">↗</span>
@@ -501,7 +525,7 @@
                             <span class="profile-card__content">
                                 <strong>Photography Instagram</strong>
                                 <span>Photography and visual work</span>
-                                <small>@aaron.schlossberg.photos</small>
+                                <small>@<span class="italic-text">aaron.schlossberg.photos</span></small>
                             </span>
 
                             <span class="profile-card__arrow" aria-hidden="true">↗</span>
@@ -526,7 +550,7 @@
                             <span class="profile-card__content">
                                 <strong>Website Instagram</strong>
                                 <span>Updates from this website</span>
-                                <small>@aaronschlossbergdotcom</small>
+                                <small>@<span class="italic-text">aaronschlossbergdotcom</span></small>
                             </span>
 
                             <span class="profile-card__arrow" aria-hidden="true">↗</span>
@@ -611,20 +635,8 @@
 
                     <div class="profile-grid">
                         <!-- Threads -->
-                        <a
-                            class="profile-card"
-                            data-config-link="threads"
-                            data-external
-                            href="https://www.threads.com/@aaron_schlossberg"
-                            target="_blank"
-                            rel="noopener noreferrer nofollow"
-                        >
-                            <span
-                                class="profile-card__icon profile-card__icon--letter"
-                                aria-hidden="true"
-                            >
-                                @
-                            </span>
+                        <a class="profile-card" data-config-link="threads" data-external href="https://www.threads.com/@aaron_schlossberg" target="_blank" rel="noopener noreferrer nofollow">
+                            <span class="profile-card__icon profile-card__icon--letter" aria-hidden="true">@</span>
 
                             <span class="profile-card__content">
                                 <strong>Threads</strong>
@@ -651,9 +663,9 @@
                             </span>
 
                             <span class="profile-card__content">
-                                <strong>X</strong>
+                                <strong>Twitter/“X”</strong>
                                 <span>Commentary and project news</span>
-                                <small>@aschloss04</small>
+                                <small>@<span class="italic-text">aschloss04</span></small>
                             </span>
 
                             <span class="profile-card__arrow" aria-hidden="true">↗</span>
@@ -677,7 +689,8 @@
 
                             <span class="profile-card__content">
                                 <strong>Reddit</strong>
-                                <span>Communities, discussion, and moderation</span>
+                                <span>Communities and discussion</span>
+                                <small><span class="italic-text">u/seismic_entrepreneur</span></small>
                             </span>
 
                             <span class="profile-card__arrow" aria-hidden="true">↗</span>
@@ -750,7 +763,7 @@
                             <span class="profile-card__content">
                                 <strong>Discord</strong>
                                 <span>Community account</span>
-                                <small>@the_lord_helix</small>
+                                <small>@<span class="italic-text">the_lord_helix</span></small>
                             </span>
 
                             <span class="profile-card__arrow" aria-hidden="true">↗</span>

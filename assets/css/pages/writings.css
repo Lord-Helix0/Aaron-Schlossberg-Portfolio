@@ -393,8 +393,9 @@
 }
 
 .writings-additional-filters {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 0.8rem;
     margin-top: 1.2rem;
     padding-top: 1.1rem;
@@ -407,7 +408,7 @@
 }
 
 .writings-additional-filters > p {
-    grid-column: 1 / -1;
+    flex: 0 0 100%;
     margin: 0;
     color: #392b2b;
     font-size: 0.94rem;
@@ -416,6 +417,8 @@
 }
 
 .writings-additional-filter {
+    box-sizing: border-box;
+    flex: 0 1 calc((100% - 1.6rem) / 3);
     min-width: 0;
 }
 
@@ -891,8 +894,8 @@
         border-radius: 16px;
     }
 
-    .writings-additional-filters {
-        grid-template-columns: 1fr;
+    .writings-additional-filter {
+        flex-basis: 100%;
     }
 }
 
